@@ -69,4 +69,3 @@ D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Debug\netcoreapp2.1
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.RazorTargetAssemblyInfo.cache
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.dll
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.pdb
-D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.csprojAssemblyReference.cache

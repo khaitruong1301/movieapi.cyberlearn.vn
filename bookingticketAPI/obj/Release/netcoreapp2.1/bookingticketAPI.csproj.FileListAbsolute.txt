@@ -55,8 +55,6 @@ C:\Users\Admin\Desktop\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\n
 C:\Users\Admin\Desktop\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\netcoreapp2.1\bookingticketAPI.dll
 C:\Users\Admin\Desktop\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\netcoreapp2.1\bookingticketAPI.pdb
 C:\Users\Admin\Desktop\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\netcoreapp2.1\bookingticketAPI.genruntimeconfig.cache
-D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\bin\Release\netcoreapp2.1\appsettings.Development.json
-D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\bin\Release\netcoreapp2.1\appsettings.json
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\bin\Release\netcoreapp2.1\bookingticketAPI.deps.json
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\bin\Release\netcoreapp2.1\bookingticketAPI.runtimeconfig.json
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\bin\Release\netcoreapp2.1\bookingticketAPI.runtimeconfig.dev.json
@@ -72,4 +70,3 @@ D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\netcoreapp2
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\netcoreapp2.1\bookingticketAPI.RazorTargetAssemblyInfo.cache
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\netcoreapp2.1\bookingticketAPI.dll
 D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\netcoreapp2.1\bookingticketAPI.pdb
-D:\cybersoft\movie0706.cybersoft.edu.vn\bookingticketAPI\obj\Release\netcoreapp2.1\bookingticketAPI.genruntimeconfig.cache
