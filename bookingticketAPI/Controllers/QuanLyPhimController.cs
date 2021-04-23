@@ -32,7 +32,27 @@ namespace bookingticketAPI.Controllers
         //string hostName =  "http://movie0706.cybersoft.edu.vn/hinhanh/";
 
 
-  
+
+
+
+        [HttpGet("LayDanhSachBanner")]
+        public async Task<ResponseEntity> LayDanhSachBanner()
+        {
+            try
+            {
+                var lstResult = db.Banner.Select(n=> new Banner() { MaPhim = n.MaPhim,HinhAnh= DomainImage + n.HinhAnh,MaBanner=n.MaBanner});
+
+                return new ResponseEntity(StatusCodeConstants.OK, lstResult, MessageConstant.MESSAGE_SUCCESS_200);
+            }
+            catch (Exception ex)
+            {
+
+                return new ResponseEntity(StatusCodeConstants.OK, "Không tìm banner !", MessageConstant.MESSAGE_SUCCESS_200);
+            }
+        }
+
+
+
 
         [HttpGet("LayDanhSachPhim")]
         public async Task<ResponseEntity> LayDanhSachPhim(string maNhom = "GP01", string tenPhim = "")
@@ -57,7 +77,7 @@ namespace bookingticketAPI.Controllers
         }
 
 
-      
+        
 
 
         [HttpGet("LayDanhSachPhimPhanTrang")]

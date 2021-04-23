@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{F21831DB-4C44-41A5-A50F-851B830BBB04}|CRMCyberSoft">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/QuanLyPhimController.cs">
+    <Files>
+      <File FileName="Models/dbRapChieuPhimContext.cs" Line="242" Column="36" />
+      <File FileName="Models/CumRap.cs" Line="15" Column="45" />
+      <File FileName="Models/ViewModel/Banner.cs" Line="7" Column="23" />
+      <File FileName="Controllers/QuanLyPhimController.cs" Line="46" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="bookingticketAPI" expanded="True">
+            <Node name="bookingticketAPI" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="QuanLyPhimController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True">
+                <Node name="ViewModel" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.bookingticketAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

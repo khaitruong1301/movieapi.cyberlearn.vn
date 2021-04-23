@@ -27,6 +27,7 @@ namespace bookingticketAPI.Models
         public virtual DbSet<Nhom> Nhom { get; set; }
         public virtual DbSet<Phim> Phim { get; set; }
         public virtual DbSet<Rap> Rap { get; set; }
+        public virtual DbSet<Banner> Banner { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -235,6 +236,18 @@ namespace bookingticketAPI.Models
                     .WithMany(p => p.Phim)
                     .HasForeignKey(d => d.MaNhom)
                     .HasConstraintName("FK_Phim_Nhom1");
+            });
+
+
+            modelBuilder.Entity<Banner>(entity =>
+            {
+                entity.HasKey(e => e.MaBanner);
+                entity.Property(e => e.MaPhim).HasColumnType("int");
+
+                entity.Property(e => e.HinhAnh).HasMaxLength(255);
+
+
+              
             });
 
             modelBuilder.Entity<Rap>(entity =>
