@@ -50,7 +50,7 @@
           "lib/netstandard2.0/Dapper.dll": {}
         }
       },
-      "Microsoft.AspNet.WebApi.Client/5.2.6": {
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.1",
@@ -63,10 +63,10 @@
           "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.AspNet.WebApi.Core/5.2.3": {
+      "Microsoft.AspNet.WebApi.Core/5.2.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.WebApi.Client": "5.2.3"
+          "Microsoft.AspNet.WebApi.Client": "5.2.7"
         },
         "compile": {
           "lib/net45/System.Web.Http.dll": {}
@@ -4811,10 +4811,10 @@
         "lib/netstandard2.0/Dapper.xml"
       ]
     },
-    "Microsoft.AspNet.WebApi.Client/5.2.6": {
-      "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
+    "Microsoft.AspNet.WebApi.Client/5.2.7": {
+      "sha512": "/76fAHknzvFqbznS6Uj2sOyE9rJB3PltY+f53TH8dX9RiGhk02EhuFCWljSj5nnqKaTsmma8DFR50OGyQ4yJ1g==",
       "type": "package",
-      "path": "microsoft.aspnet.webapi.client/5.2.6",
+      "path": "microsoft.aspnet.webapi.client/5.2.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4824,21 +4824,21 @@
         "lib/netstandard2.0/System.Net.Http.Formatting.xml",
         "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
         "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
-        "microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
+        "microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
         "microsoft.aspnet.webapi.client.nuspec"
       ]
     },
-    "Microsoft.AspNet.WebApi.Core/5.2.3": {
-      "sha512": "o90QYlRV8VKR1S7+EcJw9w8WSyVFLl+IIzN8ILZ+n2t6rsc/KS8kBxRzA7wCFPRUHhebCfLqilBk39phvanx3g==",
+    "Microsoft.AspNet.WebApi.Core/5.2.7": {
+      "sha512": "gM2QzApnHdy1FbKUJ/ROGJSm69P2G+HMoVd/t5Vq1O/zZ5TI4IKC9PX6nUfRt/NHgebZOIWHpB4/4K4inuy4yQ==",
       "type": "package",
-      "path": "microsoft.aspnet.webapi.core/5.2.3",
+      "path": "microsoft.aspnet.webapi.core/5.2.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Content/web.config.transform",
         "lib/net45/System.Web.Http.dll",
         "lib/net45/System.Web.Http.xml",
-        "microsoft.aspnet.webapi.core.5.2.3.nupkg.sha512",
+        "microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
         "microsoft.aspnet.webapi.core.nuspec"
       ]
     },
@@ -12796,6 +12796,7 @@
     ".NETCoreApp,Version=v2.1": [
       "AutoMapper >= 8.1.1",
       "Dapper >= 1.60.6",
+      "Microsoft.AspNet.WebApi.Core >= 5.2.7",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.EntityFrameworkCore.Proxies >= 2.1.11",
@@ -12859,6 +12860,10 @@
           "Dapper": {
             "target": "Package",
             "version": "[1.60.6, )"
+          },
+          "Microsoft.AspNet.WebApi.Core": {
+            "target": "Package",
+            "version": "[5.2.7, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
@@ -12930,7 +12935,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -12939,7 +12944,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.1"

@@ -5,6 +5,7 @@
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/bookingticketAPI.runtimeconfig.dev.json
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/bookingticketAPI.dll
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/bookingticketAPI.pdb
+/Users/macbook/Documents/cyberlearn/khoa5/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.csprojAssemblyReference.cache
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.AssemblyInfoInputs.cache
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.AssemblyInfo.cs
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.csproj.CoreCompileInputs.cache

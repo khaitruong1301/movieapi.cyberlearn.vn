@@ -1,10 +1,14 @@
 ﻿<Properties StartupConfiguration="{F21831DB-4C44-41A5-A50F-851B830BBB04}|CRMCyberSoft">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/QuanLyPhimController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoMapper.config.cs">
     <Files>
       <File FileName="Models/dbRapChieuPhimContext.cs" Line="242" Column="36" />
-      <File FileName="Models/CumRap.cs" Line="15" Column="45" />
-      <File FileName="Models/ViewModel/Banner.cs" Line="7" Column="23" />
-      <File FileName="Controllers/QuanLyPhimController.cs" Line="46" Column="14" />
+      <File FileName="Models/CumRap.cs" />
+      <File FileName="Models/ViewModel/Banner.cs" />
+      <File FileName="Controllers/QuanLyPhimController.cs" Line="35" Column="1" />
+      <File FileName="Startup.cs" Line="43" Column="38" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="AutoMapper.config.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,12 +16,8 @@
           <Node name="bookingticketAPI" expanded="True">
             <Node name="bookingticketAPI" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="QuanLyPhimController.cs" selected="True" />
-              </Node>
-              <Node name="Models" expanded="True">
-                <Node name="ViewModel" expanded="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="AutoMapper.config.cs" selected="True" />
             </Node>
           </Node>
         </State>

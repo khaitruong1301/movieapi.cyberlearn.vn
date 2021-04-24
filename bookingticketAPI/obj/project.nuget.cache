@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "efT5BKhJs8lhquqceoZZyw7ctEEPRFL54S3WniJf/XmDhFbnxOpveuLbCZlvnSYmhKeb3QlTz0Wc5BZzFrRnCA==",
+  "dgSpecHash": "NUrmHWbfCICsKOzr2YNIiOb7ENkd7yhJz9U7X40r51U6jkuKeqCAGu7bfsz/FXF7I6TGOj76NSoqUM2lx47JZw==",
   "success": true,
   "projectFilePath": "/Users/macbook/Documents/cyberlearn/khoa5/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
   "expectedPackageFiles": [
     "/Users/macbook/.nuget/packages/automapper/8.1.1/automapper.8.1.1.nupkg.sha512",
     "/Users/macbook/.nuget/packages/castle.core/4.2.1/castle.core.4.2.1.nupkg.sha512",
     "/Users/macbook/.nuget/packages/dapper/1.60.6/dapper.1.60.6.nupkg.sha512",
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnet.webapi.client/5.2.6/microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
-    "/Users/macbook/.nuget/packages/microsoft.aspnet.webapi.core/5.2.3/microsoft.aspnet.webapi.core.5.2.3.nupkg.sha512",
+    "/Users/macbook/.nuget/packages/microsoft.aspnet.webapi.client/5.2.7/microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+    "/Users/macbook/.nuget/packages/microsoft.aspnet.webapi.core/5.2.7/microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore/2.1.1/microsoft.aspnetcore.2.1.1.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.antiforgery/2.1.1/microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.app/2.1.1/microsoft.aspnetcore.app.2.1.1.nupkg.sha512",
@@ -318,7 +318,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.1"
