@@ -32,6 +32,7 @@ namespace bookingticketAPI.Models.ViewModel
         public string MaCumRap { get; set; }
         public string TenCumRap { get; set; }
         public string HinhAnh { get; set; }
+        public string DiaChi { get; set; }
 
         public List<LichChieuPhim> LichChieuPhim = new List<LichChieuPhim>();
         

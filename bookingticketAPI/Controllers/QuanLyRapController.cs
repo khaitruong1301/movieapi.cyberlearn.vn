@@ -115,8 +115,10 @@ namespace bookingticketAPI.Controllers
                     cum.MaCumRap = cumRap.Key.MaCumRap;
                     cum.TenCumRap = cumRap.Key.TenCumRap;
                     cum.DiaChi = cumRap.Key.ThongTin;
-                        
-                    foreach(var phim in cumRap.GroupBy(n=> new { n.MaPhim, n.TenPhim,n.HinhAnh,n.DangChieu,n.SapChieu,n.Hot}))
+                    cum.HinhAnh = "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png";
+
+
+                    foreach (var phim in cumRap.GroupBy(n=> new { n.MaPhim, n.TenPhim,n.HinhAnh,n.DangChieu,n.SapChieu,n.Hot}))
                     {
 
                         Phim_ phimModel = new Phim_();
@@ -195,11 +197,13 @@ namespace bookingticketAPI.Controllers
                     heThongRap.Logo = DomainImage + htr.Key.Logo;
                     heThongRap.MaHeThongRap = htr.Key.MaHeThongRap;
                     heThongRap.TenHeThongRap = htr.Key.TenHeThongRap;
-                    foreach (var cumRap in htr.GroupBy(n => new { n.MaCumRap, n.TenCumRap }))
+                    foreach (var cumRap in htr.GroupBy(n => new { n.MaCumRap, n.TenCumRap,n.ThongTin }))
                     {
                         ThongTinLichChieuCumRap cum = new ThongTinLichChieuCumRap();
                         cum.MaCumRap = cumRap.Key.MaCumRap;
                         cum.TenCumRap = cumRap.Key.TenCumRap;
+                        cum.HinhAnh = "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952137769.png";
+                        cum.DiaChi = cumRap.Key.ThongTin;
                         foreach (var lichChieu in cumRap)
                         {
                             LichChieuPhim lcPhim = new LichChieuPhim();

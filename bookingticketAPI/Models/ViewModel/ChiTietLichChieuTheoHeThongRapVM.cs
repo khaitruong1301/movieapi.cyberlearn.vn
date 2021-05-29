@@ -17,6 +17,7 @@ namespace bookingticketAPI.Models.ViewModel
     public class CumRap_ {
         public string MaCumRap { get; set; }
         public string TenCumRap { get; set; }
+        public string HinhAnh { get; set; }
         public string DiaChi { get; set; }
         public List<Phim_> DanhSachPhim = new List<Phim_>();
         

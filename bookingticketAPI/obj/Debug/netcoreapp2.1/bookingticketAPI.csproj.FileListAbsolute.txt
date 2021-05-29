@@ -31,3 +31,6 @@ D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\boo
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.RazorTargetAssemblyInfo.cache
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.dll
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.pdb
+D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\bin\Debug\netcoreapp2.1\appsettings.json
+D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.genruntimeconfig.cache
