@@ -7,6 +7,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\bin\Release\netcoreapp2.1\publish\</_PublishTargetUrl>
-    <History>True|2021-05-29T17:37:01.8199446Z;</History>
+    <History>True|2021-06-05T16:41:18.6259582Z;True|2021-05-30T00:37:01.8199446+07:00;</History>
   </PropertyGroup>
 </Project>
