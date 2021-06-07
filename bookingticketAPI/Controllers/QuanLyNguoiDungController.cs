@@ -120,6 +120,7 @@ namespace bookingticketAPI.Controllers
             var token = new System.IdentityModel.Tokens.Jwt.JwtSecurityToken(
                     claims: new Claim[] {
                         new Claim(ClaimTypes.Name,ndDN.TaiKhoan),
+                        new Claim(ClaimTypes.Email,ndDN.Email),
                         new Claim(ClaimTypes.Role,ndDN.MaLoaiNguoiDung),
                         new Claim(ClaimTypes.Role,ndDN.Email),
                         new Claim(ClaimTypes.Role,ndDN.MaNhom),

@@ -39,6 +39,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.1.11",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
+          "NuSpec.ReferenceGenerator": "1.4.2",
           "Pagination": "2.4.1",
           "ReflectionIT.Mvc.Paging": "3.4.0",
           "Swashbuckle.AspNetCore": "4.0.1",
@@ -749,6 +750,7 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "NuSpec.ReferenceGenerator/1.4.2": {},
       "Pagination/2.4.1": {
         "runtime": {
           "lib/netstandard2.0/Pagination.dll": {
@@ -4102,6 +4104,13 @@
       "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "NuSpec.ReferenceGenerator/1.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0AA2wcMaE84hDxzQOdRi2K2SGgEnJQ4LG6MyTrPvyjjyzeOT1hpUJk/w9NX5QAJy1T5eE7r3wPLq1rALr5oPaQ==",
+      "path": "nuspec.referencegenerator/1.4.2",
+      "hashPath": "nuspec.referencegenerator.1.4.2.nupkg.sha512"
     },
     "Pagination/2.4.1": {
       "type": "package",

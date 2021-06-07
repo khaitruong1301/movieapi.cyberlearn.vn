@@ -136,10 +136,10 @@ namespace bookingticketAPI
         {
             try
             {
-               
+                //tokenString = tokenString.Replace("Bearer ", "").Trim();
                 dbRapChieuPhimContext db = new dbRapChieuPhimContext();
-                string email = parseJWTToEmail(tokenString);
-                userToken nguoiDung = db.NguoiDung.Where(n => n.Email == email).Select(n => new userToken { taiKhoan = n.TaiKhoan, email = n.Email, maLoaiNguoiDung = n.MaLoaiNguoiDung, maNhom = n.MaNhom }).FirstOrDefault();
+                string taiKhoan = parseJWTToEmail(tokenString);
+                userToken nguoiDung = db.NguoiDung.Where(n => n.TaiKhoan == taiKhoan).Select(n => new userToken { taiKhoan = n.TaiKhoan, email = n.Email, maLoaiNguoiDung = n.MaLoaiNguoiDung, maNhom = n.MaNhom }).FirstOrDefault();
                 if (nguoiDung != null)
                 {
                     return nguoiDung;
@@ -157,8 +157,8 @@ namespace bookingticketAPI
 
             tokenstring = tokenstring.Replace("Bearer ", "");
             //var stream = Encoding.ASCII.GetBytes("CYBERSOFT2020_SECRET");
-            var token = new JwtSecurityTokenHandler().ReadJwtToken(tokenstring);
-            var email = token.Claims.First(c => c.Type == ClaimTypes.Email).Value;
+            JwtSecurityToken token = new JwtSecurityTokenHandler().ReadJwtToken(tokenstring);
+            var email = token.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name).Value;
             return email;
         }
 
