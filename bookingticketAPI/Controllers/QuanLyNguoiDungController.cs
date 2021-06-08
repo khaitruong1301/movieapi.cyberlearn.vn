@@ -252,7 +252,7 @@ namespace bookingticketAPI.Controllers
 
             //return Ok(result);
         }
-        //[Authorize]
+        [Authorize]
         [HttpPost("ThongTinTaiKhoan")]
         public async Task<ResponseEntity> ThongTinTaiKhoan()
         {
@@ -432,6 +432,7 @@ namespace bookingticketAPI.Controllers
                 //return response;
             }
         }
+
 
         [Authorize(Roles = "QuanTri")]
         [HttpDelete("XoaNguoiDung")]
