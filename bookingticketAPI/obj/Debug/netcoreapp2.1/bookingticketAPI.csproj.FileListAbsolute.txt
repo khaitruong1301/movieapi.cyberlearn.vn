@@ -41,7 +41,6 @@ D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\bin\Debug\netcoreapp2.1\boo
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\bin\Debug\netcoreapp2.1\bookingticketAPI.runtimeconfig.dev.json
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\bin\Debug\netcoreapp2.1\bookingticketAPI.dll
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\bin\Debug\netcoreapp2.1\bookingticketAPI.pdb
-D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.csprojAssemblyReference.cache
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.AssemblyInfoInputs.cache
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.AssemblyInfo.cs
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.csproj.CoreCompileInputs.cache

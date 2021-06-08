@@ -277,7 +277,7 @@ namespace bookingticketAPI.Controllers
             List<ThongTinDatVe> lstThongTinDatVe = new List<ThongTinDatVe>();
             if (lstDatVe.Count() !=0)
             {
-                foreach (var item in lstDatVe.GroupBy(n=>n.NgayDat))
+                foreach (var item in lstDatVe.GroupBy(n=>n.MaLichChieu))
                 {
                     ThongTinDatVe ttdv = new ThongTinDatVe();
                     ttdv.MaVe = item.First().MaVe;
@@ -291,7 +291,7 @@ namespace bookingticketAPI.Controllers
                         ttdv.DanhSachGhe.Add(ttg);
                     }
                     ttdv.NgayDat = item.First().NgayDat.Value;
-                    ttdv.HinhAnh = item.First().MaLichChieuNavigation.MaPhimNavigation.HinhAnh;
+                    ttdv.HinhAnh = DomainImage +  item.First().MaLichChieuNavigation.MaPhimNavigation.HinhAnh;
                     ttdv.TenPhim = item.First().MaLichChieuNavigation.MaPhimNavigation.TenPhim;
                     ttdv.GiaVe = item.First().GiaVe.Value;
                     ttdv.ThoiLuongPhim = item.First().MaLichChieuNavigation.ThoiLuong.Value;
