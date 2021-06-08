@@ -291,6 +291,7 @@ namespace bookingticketAPI.Controllers
                         ttdv.DanhSachGhe.Add(ttg);
                     }
                     ttdv.NgayDat = item.First().NgayDat.Value;
+                    ttdv.HinhAnh = item.First().MaLichChieuNavigation.MaPhimNavigation.HinhAnh;
                     ttdv.TenPhim = item.First().MaLichChieuNavigation.MaPhimNavigation.TenPhim;
                     ttdv.GiaVe = item.First().GiaVe.Value;
                     ttdv.ThoiLuongPhim = item.First().MaLichChieuNavigation.ThoiLuong.Value;

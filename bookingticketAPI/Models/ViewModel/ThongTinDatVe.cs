@@ -12,6 +12,7 @@ namespace bookingticketAPI.Models.ViewModel
 
         public DateTime NgayDat { get; set; }
         public string TenPhim { get; set; }
+        public string HinhAnh { get; set; }
         public decimal GiaVe { get; set; }
         public int ThoiLuongPhim { get; set; }
 
