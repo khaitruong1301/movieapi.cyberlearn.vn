@@ -67,15 +67,16 @@ namespace bookingticketAPI.Controllers
         [HttpPost("DangKy")]
         public async Task<ResponseEntity> DangKy(NguoiDung_VM nd)
         {
-            nd.MaNhom = nd.MaNhom.ToUpper();
-            bool ckNhom = db.Nhom.Any(n => n.MaNhom == nd.MaNhom);
-            if (!ckNhom)
-            {
-                return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Nhóm người dùng không hợp lệ!", MessageConstant.BAD_REQUEST);
+            //nd.MaNhom = nd.MaNhom.ToUpper();
+            //bool ckNhom = db.Nhom.Any(n => n.MaNhom == nd.MaNhom);
+            //if (!ckNhom)
+            //{
+            //    return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Nhóm người dùng không hợp lệ!", MessageConstant.BAD_REQUEST);
 
-                //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Nhóm người dùng không hợp lệ!");
-                //return response;
-            }
+            //    //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Nhóm người dùng không hợp lệ!");
+            //    //return response;
+            //}
+            nd.MaNhom = "GP00";
             bool ckEmail = db.NguoiDung.Any(n => n.Email == nd.Email);
             if (ckEmail)
             {
