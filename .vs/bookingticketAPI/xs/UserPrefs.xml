@@ -1,28 +1,32 @@
 ﻿<Properties StartupConfiguration="{5E207800-0A17-4138-A8C7-0A6BD756EA2F}|CRMCyberSoft">
-  <MonoDevelop.Ide.Workbench ActiveDocument="bookingticketAPI/Controllers/QuanLyNguoiDungController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="bookingticketAPI/Controllers/QuanLyDatVeController.cs">
     <Files>
+      <File FileName="bookingticketAPI/Hubs/DatVeHub.cs" Line="81" Column="14" />
+      <File FileName="bookingticketAPI/Common.cs" Line="160" Column="1" />
       <File FileName="bookingticketAPI/Controllers/QuanLyDatVeController.cs" Line="38" Column="1" />
-      <File FileName="bookingticketAPI/Common.cs" Line="149" Column="1" />
-      <File FileName="bookingticketAPI/Models/dbRapChieuPhimContext.cs" Line="12" Column="1" />
-      <File FileName="bookingticketAPI/Controllers/QuanLyRapController.cs" Line="1" Column="1" />
-      <File FileName="bookingticketAPI/Controllers/QuanLyPhimController.cs" Line="1" Column="1" />
-      <File FileName="bookingticketAPI/Controllers/QuanLyNguoiDungController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="bookingticketAPI" expanded="True">
             <Node name="bookingticketAPI" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="QuanLyNguoiDungController.cs" selected="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="SdkDependencies" expanded="True" />
               </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="QuanLyDatVeController.cs" selected="True" />
+              </Node>
+              <Node name="Hubs" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="PublishProfiles" expanded="True" />
+              </Node>
+              <Node name="StatusConstants" expanded="True" />
+              <Node name="wwwroot" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -31,8 +35,9 @@
   <MonoDevelop.Ide.ItemProperties.bookingticketAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/Controllers/QuanLyDatVeController.cs" relfile="bookingticketAPI/Controllers/QuanLyDatVeController.cs" line="38" column="1" />
-      <Breakpoint file="/Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/Common.cs" relfile="bookingticketAPI/Common.cs" line="160" column="1" />
+      <Breakpoint file="/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/Controllers/QuanLyDatVeController.cs" relfile="bookingticketAPI/Controllers/QuanLyDatVeController.cs" line="38" column="1" />
+      <Breakpoint file="/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/Hubs/DatVeHub.cs" relfile="bookingticketAPI/Hubs/DatVeHub.cs" line="70" column="1" />
+      <Breakpoint file="/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/Hubs/DatVeHub.cs" relfile="bookingticketAPI/Hubs/DatVeHub.cs" line="73" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

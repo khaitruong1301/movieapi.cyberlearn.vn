@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using bookingticketAPI.Controllers;
+using bookingticketAPI.Hubs;
 using bookingticketAPI.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -68,6 +69,9 @@ namespace bookingticketAPI
 
                 };
             });
+
+            //signalR
+            services.AddSignalR();
             //Cho phép sử dụng cross
             services.AddCors(options =>
             {
@@ -118,7 +122,11 @@ namespace bookingticketAPI
             //allow origin
             app.UseCors(MyAllowSpecificOrigins);
 
-
+            //signalr
+            app.UseSignalR(route =>
+            {
+                route.MapHub<DatVeHub>("/datvehub");
+            });
 
             app.UseHttpsRedirection();
             app.UseMvc();

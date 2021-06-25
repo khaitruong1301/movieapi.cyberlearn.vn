@@ -2685,7 +2685,7 @@
           "Microsoft.NETCore.DotNetAppHost": "2.1.0"
         }
       },
-      "Microsoft.NETCore.Platforms/2.1.0": {
+      "Microsoft.NETCore.Platforms/5.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -7468,17 +7468,18 @@
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "ok+RPAtESz/9MUXeIEz6Lv5XAGQsaNmEYXMsgVALj4D7kqC8gveKWXWXbufLySR2fWrwZf8smyN5RmHu0e4BHA==",
+    "Microsoft.NETCore.Platforms/5.0.2": {
+      "sha512": "T8Lu7xWbcLFrficw7eOcX1NqDiIvqhyzJ7OA9KyZ/9hfU5zmYGddTyiD6HfYfYkjiPSeYgVsIZt1WxZ8YbI8Cw==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/2.1.0",
+      "path": "microsoft.netcore.platforms/5.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.5.0.2.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
@@ -12827,6 +12828,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.11",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Microsoft.NETCore.Platforms >= 5.0.2",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
       "NuSpec.ReferenceGenerator >= 1.4.2",
       "Pagination >= 2.4.1",
@@ -12837,30 +12839,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/macbook/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
+      "projectUniqueName": "/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
       "projectName": "bookingticketAPI",
-      "projectPath": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\obj\\",
+      "projectPath": "/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
+      "packagesPath": "/Users/macbook/.nuget/packages/",
+      "outputPath": "/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/macbook/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12926,6 +12926,10 @@
             "version": "[2.1.0, )",
             "autoReferenced": true
           },
+          "Microsoft.NETCore.Platforms": {
+            "target": "Package",
+            "version": "[5.0.2, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.1.9, )"
@@ -12967,7 +12971,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   },

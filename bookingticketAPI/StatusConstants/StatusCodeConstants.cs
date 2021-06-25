@@ -20,7 +20,7 @@ namespace bookingticketAPI.StatusConstants
     }
     public class Config
     {
-        public static string hostName = "https://movie0706.cybersoft.edu.vn/hinhanh/";
+        public static string hostName = "https://movieapi.cybersoft.edu.vn/hinhanh/";
         public static string connect = "Server=103.97.125.205,1433;database=dbRapChieuPhim;user id = khaicybersoft; password=khaicybersoft321@;Trusted_Connection=True;Integrated Security = False";
     }
 }
