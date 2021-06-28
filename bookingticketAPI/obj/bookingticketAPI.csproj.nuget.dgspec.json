@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj": {}
+    "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj": {}
   },
   "projects": {
-    "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj": {
+    "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
         "projectName": "bookingticketAPI",
-        "projectPath": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
-        "packagesPath": "/Users/macbook/.nuget/packages/",
-        "outputPath": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/obj/",
+        "projectPath": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn\\bookingticketAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/macbook/.config/NuGet/NuGet.Config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -143,7 +145,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
