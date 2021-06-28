@@ -1,15 +1,38 @@
 ﻿<Properties StartupConfiguration="{5E207800-0A17-4138-A8C7-0A6BD756EA2F}|CRMCyberSoft">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="bookingticketAPI/Controllers/QuanLyDatVeController.cs">
     <Files>
       <File FileName="bookingticketAPI/Hubs/DatVeHub.cs" Line="81" Column="14" />
       <File FileName="bookingticketAPI/Common.cs" Line="160" Column="1" />
       <File FileName="bookingticketAPI/Controllers/QuanLyDatVeController.cs" Line="38" Column="1" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="bookingticketAPI/swagger/AuthorizationHeaderParameterOperationFilter .cs">
+    <Files>
+      <File FileName="bookingticketAPI/Controllers/QuanLyDatVeController.cs" Line="57" Column="51" />
+      <File FileName="bookingticketAPI/Common.cs" />
+      <File FileName="bookingticketAPI/Models/dbRapChieuPhimContext.cs" />
+      <File FileName="bookingticketAPI/Controllers/QuanLyRapController.cs" />
+      <File FileName="bookingticketAPI/Controllers/QuanLyPhimController.cs" />
+      <File FileName="bookingticketAPI/Controllers/QuanLyNguoiDungController.cs" />
+      <File FileName="bookingticketAPI/bookingticketAPI.csproj" />
+      <File FileName="bookingticketAPI/Startup.cs" />
+      <File FileName="bookingticketAPI/ThongBaoLoi.cs" />
+      <File FileName="bookingticketAPI/Program.cs" />
+      <File FileName="bookingticketAPI/PaginationSet.cs" />
+      <File FileName="bookingticketAPI/LoaiND.cs" />
+      <File FileName="bookingticketAPI/AutoMapper.config.cs" />
+      <File FileName="bookingticketAPI/appsettings.json" />
+      <File FileName="bookingticketAPI/swagger/AuthorizationHeaderParameterOperationFilter .cs" Line="13" Column="80" />
+      <File FileName="bookingticketAPI/swagger/SwaggerTagAttribute.cs" />
+      <File FileName="bookingticketAPI/StatusConstants/StatusCodeConstants.cs" />
+>>>>>>> 30a33c3b93756d2fd882e32e732d699cfab474c1
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="bookingticketAPI" expanded="True">
             <Node name="bookingticketAPI" expanded="True">
+<<<<<<< HEAD
               <Node name="Dependencies" expanded="True">
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
@@ -24,6 +47,15 @@
               <Node name="StatusConstants" expanded="True" />
               <Node name="wwwroot" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
+=======
+              <Node name="Controllers" expanded="True" />
+              <Node name="Hubs" expanded="True" selected="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Reponsitory" expanded="True" />
+              <Node name="StatusConstants" expanded="True" />
+              <Node name="swagger" expanded="True" />
+>>>>>>> 30a33c3b93756d2fd882e32e732d699cfab474c1
             </Node>
           </Node>
         </State>
@@ -35,9 +67,13 @@
   <MonoDevelop.Ide.ItemProperties.bookingticketAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
+<<<<<<< HEAD
       <Breakpoint file="/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/Controllers/QuanLyDatVeController.cs" relfile="bookingticketAPI/Controllers/QuanLyDatVeController.cs" line="38" column="1" />
       <Breakpoint file="/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/Hubs/DatVeHub.cs" relfile="bookingticketAPI/Hubs/DatVeHub.cs" line="70" column="1" />
       <Breakpoint file="/Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/Hubs/DatVeHub.cs" relfile="bookingticketAPI/Hubs/DatVeHub.cs" line="73" column="1" />
+=======
+      <Breakpoint file="/Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/Controllers/QuanLyDatVeController.cs" relfile="bookingticketAPI/Controllers/QuanLyDatVeController.cs" line="38" column="1" />
+>>>>>>> 30a33c3b93756d2fd882e32e732d699cfab474c1
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -23,7 +23,6 @@
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/bookingticketAPI.runtimeconfig.dev.json
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/bookingticketAPI.dll
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/bookingticketAPI.pdb
-/Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.csprojAssemblyReference.cache
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.AssemblyInfoInputs.cache
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.AssemblyInfo.cs
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.csproj.CoreCompileInputs.cache
@@ -34,6 +33,7 @@
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.dll
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.pdb
 /Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.genruntimeconfig.cache
+<<<<<<< HEAD
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/appsettings.Development.json
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/appsettings.json
 /Users/macbook/Documents/cyberlearn/khoa5/movieapi/newmovieapi/movieapi.cyberlearn.vn/bookingticketAPI/bin/Debug/netcoreapp2.1/bookingticketAPI.deps.json
@@ -70,3 +70,6 @@ D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\boo
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.dll
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.pdb
 D:\cybersoft\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.genruntimeconfig.cache
+=======
+/Users/macbook/Documents/cyberlearn/movieapi/movieapi.cyberlearn.vn/bookingticketAPI/obj/Debug/netcoreapp2.1/bookingticketAPI.csprojAssemblyReference.cache
+>>>>>>> 30a33c3b93756d2fd882e32e732d699cfab474c1
