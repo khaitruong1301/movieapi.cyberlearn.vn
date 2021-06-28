@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj": {}
+    "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj": {}
   },
   "projects": {
-    "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj": {
+    "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
+        "projectUniqueName": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
         "projectName": "bookingticketAPI",
-        "projectPath": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\obj\\",
+        "projectPath": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
+        "packagesPath": "/Users/macbook/.nuget/packages/",
+        "outputPath": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/macbook/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,6 +64,10 @@
               "target": "Package",
               "version": "[2.1.2, )"
             },
+            "Microsoft.Build.Framework": {
+              "target": "Package",
+              "version": "[16.10.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[2.1.11, )"
@@ -93,6 +95,12 @@
             "Microsoft.NETCore.Platforms": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "Microsoft.Net.Compilers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.10.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -135,7 +143,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }

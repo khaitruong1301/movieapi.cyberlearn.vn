@@ -1563,6 +1563,18 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
+      "Microsoft.Build.Framework/16.10.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Permissions": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Build.Framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Build.Framework.dll": {}
+        }
+      },
       "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
         "type": "package"
       },
@@ -2497,6 +2509,12 @@
         },
         "runtime": {
           "lib/netstandard1.4/Microsoft.IdentityModel.Xml.dll": {}
+        }
+      },
+      "Microsoft.Net.Compilers/3.10.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Net.Compilers.props": {}
         }
       },
       "Microsoft.Net.Http.Headers/2.1.1": {
@@ -4198,11 +4216,11 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Security.AccessControl/4.5.0": {
+      "System.Security.AccessControl/4.7.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0",
-          "System.Security.Principal.Windows": "4.5.0"
+          "Microsoft.NETCore.Platforms": "3.1.0",
+          "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Security.AccessControl.dll": {}
@@ -4451,10 +4469,10 @@
           "lib/netstandard2.0/System.Security.Cryptography.Xml.dll": {}
         }
       },
-      "System.Security.Permissions/4.5.0": {
+      "System.Security.Permissions/4.7.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.AccessControl": "4.5.0"
+          "System.Security.AccessControl": "4.7.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Security.Permissions.dll": {}
@@ -4463,10 +4481,10 @@
           "lib/netstandard2.0/System.Security.Permissions.dll": {}
         }
       },
-      "System.Security.Principal.Windows/4.5.0": {
+      "System.Security.Principal.Windows/4.7.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0"
+          "Microsoft.NETCore.Platforms": "3.1.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Security.Principal.Windows.dll": {}
@@ -4475,11 +4493,11 @@
           "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+          "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
             "assetType": "runtime",
             "rid": "unix"
           },
-          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -6095,6 +6113,25 @@
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
+    "Microsoft.Build.Framework/16.10.0": {
+      "sha512": "uD2GUw3AYlFSpU42c/80DouuJL6w1Kb06q4FEjQhW/9wjhBwukgx13T5MPIpSvQ8ssahKINanHfMUL89EVQHgQ==",
+      "type": "package",
+      "path": "microsoft.build.framework/16.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "lib/net472/Microsoft.Build.Framework.dll",
+        "lib/net472/Microsoft.Build.Framework.pdb",
+        "lib/net472/Microsoft.Build.Framework.xml",
+        "lib/netstandard2.0/Microsoft.Build.Framework.dll",
+        "lib/netstandard2.0/Microsoft.Build.Framework.pdb",
+        "lib/netstandard2.0/Microsoft.Build.Framework.xml",
+        "microsoft.build.framework.16.10.0.nupkg.sha512",
+        "microsoft.build.framework.nuspec",
+        "notices/THIRDPARTYNOTICES.txt"
+      ]
+    },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
       "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
       "type": "package",
@@ -7145,6 +7182,129 @@
         "lib/netstandard1.4/Microsoft.IdentityModel.Xml.xml",
         "microsoft.identitymodel.xml.5.2.0.nupkg.sha512",
         "microsoft.identitymodel.xml.nuspec"
+      ]
+    },
+    "Microsoft.Net.Compilers/3.10.0": {
+      "sha512": "EDEnjv+YJDmL9c0UoD7wjVjhDzqRwP8ZlNRWUPubJ05j+ePZeKrivfrtKV+dkSc+igg7uPT1j4Eh3FA7LivzHw==",
+      "type": "package",
+      "path": "microsoft.net.compilers/3.10.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "ThirdPartyNotices.rtf",
+        "build/Microsoft.Net.Compilers.props",
+        "microsoft.net.compilers.3.10.0.nupkg.sha512",
+        "microsoft.net.compilers.nuspec",
+        "tools/Microsoft.Build.Tasks.CodeAnalysis.dll",
+        "tools/Microsoft.CSharp.Core.targets",
+        "tools/Microsoft.CodeAnalysis.CSharp.Scripting.dll",
+        "tools/Microsoft.CodeAnalysis.CSharp.dll",
+        "tools/Microsoft.CodeAnalysis.Scripting.dll",
+        "tools/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "tools/Microsoft.CodeAnalysis.dll",
+        "tools/Microsoft.DiaSymReader.Native.amd64.dll",
+        "tools/Microsoft.DiaSymReader.Native.x86.dll",
+        "tools/Microsoft.Managed.Core.targets",
+        "tools/Microsoft.VisualBasic.Core.targets",
+        "tools/System.Buffers.dll",
+        "tools/System.Collections.Immutable.dll",
+        "tools/System.Memory.dll",
+        "tools/System.Numerics.Vectors.dll",
+        "tools/System.Reflection.Metadata.dll",
+        "tools/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/System.Text.Encoding.CodePages.dll",
+        "tools/System.Threading.Tasks.Extensions.dll",
+        "tools/VBCSCompiler.exe",
+        "tools/VBCSCompiler.exe.config",
+        "tools/cs/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/cs/Microsoft.CodeAnalysis.resources.dll",
+        "tools/csc.exe",
+        "tools/csc.exe.config",
+        "tools/csc.rsp",
+        "tools/csi.exe",
+        "tools/csi.exe.config",
+        "tools/csi.rsp",
+        "tools/de/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/de/Microsoft.CodeAnalysis.resources.dll",
+        "tools/es/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/es/Microsoft.CodeAnalysis.resources.dll",
+        "tools/fr/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/fr/Microsoft.CodeAnalysis.resources.dll",
+        "tools/it/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/it/Microsoft.CodeAnalysis.resources.dll",
+        "tools/ja/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/ja/Microsoft.CodeAnalysis.resources.dll",
+        "tools/ko/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/ko/Microsoft.CodeAnalysis.resources.dll",
+        "tools/pl/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/pl/Microsoft.CodeAnalysis.resources.dll",
+        "tools/pt-BR/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/pt-BR/Microsoft.CodeAnalysis.resources.dll",
+        "tools/ru/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/ru/Microsoft.CodeAnalysis.resources.dll",
+        "tools/tr/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/tr/Microsoft.CodeAnalysis.resources.dll",
+        "tools/vbc.exe",
+        "tools/vbc.exe.config",
+        "tools/vbc.rsp",
+        "tools/zh-Hans/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
+        "tools/zh-Hant/Microsoft.Build.Tasks.CodeAnalysis.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
+        "tools/zh-Hant/Microsoft.CodeAnalysis.resources.dll"
       ]
     },
     "Microsoft.Net.Http.Headers/2.1.1": {
@@ -11522,10 +11682,10 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Security.AccessControl/4.5.0": {
-      "sha512": "vW8Eoq0TMyz5vAG/6ce483x/CP83fgm4SJe5P8Tb1tZaobcvPrbMEL7rhH1DRdrYbbb6F0vq3OlzmK0Pkwks5A==",
+    "System.Security.AccessControl/4.7.0": {
+      "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "type": "package",
-      "path": "system.security.accesscontrol/4.5.0",
+      "path": "system.security.accesscontrol/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -11533,8 +11693,10 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/System.Security.AccessControl.dll",
         "lib/net461/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.xml",
         "lib/netstandard1.3/System.Security.AccessControl.dll",
         "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.xml",
         "lib/uap10.0.16299/_._",
         "ref/net46/System.Security.AccessControl.dll",
         "ref/net461/System.Security.AccessControl.dll",
@@ -11555,10 +11717,12 @@
         "ref/uap10.0.16299/_._",
         "runtimes/win/lib/net46/System.Security.AccessControl.dll",
         "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.xml",
         "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
         "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
         "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.accesscontrol.4.5.0.nupkg.sha512",
+        "system.security.accesscontrol.4.7.0.nupkg.sha512",
         "system.security.accesscontrol.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11891,31 +12055,37 @@
         "version.txt"
       ]
     },
-    "System.Security.Permissions/4.5.0": {
-      "sha512": "9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+    "System.Security.Permissions/4.7.0": {
+      "sha512": "dkOV6YYVBnYRa15/yv004eCGRBVADXw8qRbbNiCn/XpdJSUXkkUeIvdvFHkvnko4CdKMqG8yRHC4ox83LSlMsQ==",
       "type": "package",
-      "path": "system.security.permissions/4.5.0",
+      "path": "system.security.permissions/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net461/System.Security.Permissions.dll",
+        "lib/net461/System.Security.Permissions.xml",
+        "lib/netcoreapp3.0/System.Security.Permissions.dll",
+        "lib/netcoreapp3.0/System.Security.Permissions.xml",
         "lib/netstandard2.0/System.Security.Permissions.dll",
+        "lib/netstandard2.0/System.Security.Permissions.xml",
         "ref/net461/System.Security.Permissions.dll",
         "ref/net461/System.Security.Permissions.xml",
+        "ref/netcoreapp3.0/System.Security.Permissions.dll",
+        "ref/netcoreapp3.0/System.Security.Permissions.xml",
         "ref/netstandard2.0/System.Security.Permissions.dll",
         "ref/netstandard2.0/System.Security.Permissions.xml",
-        "system.security.permissions.4.5.0.nupkg.sha512",
+        "system.security.permissions.4.7.0.nupkg.sha512",
         "system.security.permissions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "System.Security.Principal.Windows/4.5.0": {
-      "sha512": "U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+    "System.Security.Principal.Windows/4.7.0": {
+      "sha512": "ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "type": "package",
-      "path": "system.security.principal.windows/4.5.0",
+      "path": "system.security.principal.windows/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -11923,12 +12093,16 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net46/System.Security.Principal.Windows.dll",
         "lib/net461/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.xml",
         "lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.xml",
         "lib/uap10.0.16299/_._",
         "ref/net46/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.dll",
         "ref/net461/System.Security.Principal.Windows.xml",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.xml",
         "ref/netstandard1.3/System.Security.Principal.Windows.dll",
         "ref/netstandard1.3/System.Security.Principal.Windows.xml",
         "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
@@ -11944,12 +12118,19 @@
         "ref/netstandard2.0/System.Security.Principal.Windows.xml",
         "ref/uap10.0.16299/_._",
         "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
         "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
         "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.principal.windows.4.5.0.nupkg.sha512",
+        "system.security.principal.windows.4.7.0.nupkg.sha512",
         "system.security.principal.windows.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12822,12 +13003,14 @@
       "Microsoft.AspNet.WebApi.Core >= 5.2.7",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
+      "Microsoft.Build.Framework >= 16.10.0",
       "Microsoft.EntityFrameworkCore.Proxies >= 2.1.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.11",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.11",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.NETCore.Platforms >= 5.0.2",
+      "Microsoft.Net.Compilers >= 3.10.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
       "NuSpec.ReferenceGenerator >= 1.4.2",
       "Pagination >= 2.4.1",
@@ -12838,30 +13021,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/macbook/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
+      "projectUniqueName": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
       "projectName": "bookingticketAPI",
-      "projectPath": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\obj\\",
+      "projectPath": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/bookingticketAPI.csproj",
+      "packagesPath": "/Users/macbook/.nuget/packages/",
+      "outputPath": "/Users/macbook/Documents/cyberlearn/movieapi.cyberlearn.vn/bookingticketAPI/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/macbook/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12903,6 +13084,10 @@
             "target": "Package",
             "version": "[2.1.2, )"
           },
+          "Microsoft.Build.Framework": {
+            "target": "Package",
+            "version": "[16.10.0, )"
+          },
           "Microsoft.EntityFrameworkCore.Proxies": {
             "target": "Package",
             "version": "[2.1.11, )"
@@ -12930,6 +13115,12 @@
           "Microsoft.NETCore.Platforms": {
             "target": "Package",
             "version": "[5.0.2, )"
+          },
+          "Microsoft.Net.Compilers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.10.0, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
@@ -12972,17 +13163,11 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\cybersoft\\movieapi.cyberlearn.vn\\bookingticketAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",
