@@ -42,7 +42,7 @@ namespace bookingticketAPI.Hubs
 
         public async Task datGhe(string taiKhoan, string danhSachGheDangDat, int maLichChieu)
         {
-            IEnumerable<DanhSachVeDangDatVM> dsGheDangDatReturn;
+            IEnumerable<DanhSachVeDangDatVM> dsGheDangDatReturn = new List<DanhSachVeDangDatVM>();
             using (var connection = new SqlConnection(_connectionString))
             {
                 var param = new DynamicParameters();
@@ -50,7 +50,11 @@ namespace bookingticketAPI.Hubs
                 param.Add("@DANHSACHGHE", danhSachGheDangDat);
                 param.Add("@MALICHCHIEU", maLichChieu);
                 await connection.ExecuteAsync("PUT_DS_GHE_DANG_DAT", param, commandType: CommandType.StoredProcedure);
-                dsGheDangDatReturn = await connection.QueryAsync<DanhSachVeDangDatVM>("SELECT * FROM [dbo].[DANHSACHDATVE] WHERE MaLichChieu = " + maLichChieu, commandType: CommandType.Text);
+                var result =  connection.QueryAsync<DanhSachVeDangDatVM>("SELECT * FROM [dbo].[DANHSACHDATVE] WHERE MaLichChieu = " + maLichChieu, commandType: CommandType.Text).Result;
+                if (result.Count ()> 0)
+                {
+                    dsGheDangDatReturn = result;
+                }
             }
             await Clients.All.SendAsync("loadDanhSachGheDaDat", dsGheDangDatReturn);
         }
