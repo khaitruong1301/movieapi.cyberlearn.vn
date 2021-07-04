@@ -152,97 +152,97 @@ namespace bookingticketAPI.Controllers
 
 
 
-        [HttpPost("ThemPhim")]
-        [Authorize(Roles = "QuanTri")]
-        public async Task<ResponseEntity> ThemPhim(PhimInsert model)
-        {
+        //[HttpPost("ThemPhim")]
+        //[Authorize(Roles = "QuanTri")]
+        //public async Task<ResponseEntity> ThemPhim(PhimInsert model)
+        //{
            
-            model.BiDanh = LoaiBoKyTu.bestLower(model.TenPhim);
-            try
-            {
-                model.MaNhom = model.MaNhom.ToUpper();
-                bool ckb = db.Nhom.Any(n => n.MaNhom == model.MaNhom);
-                if (!ckb)
-                {
+        //    model.BiDanh = LoaiBoKyTu.bestLower(model.TenPhim);
+        //    try
+        //    {
+        //        model.MaNhom = model.MaNhom.ToUpper();
+        //        bool ckb = db.Nhom.Any(n => n.MaNhom == model.MaNhom);
+        //        if (!ckb)
+        //        {
 
-                    return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày không hợp lệ, Ngày có định dạng dd/MM/yyyy !", MessageConstant.MESSAGE_ERROR_400);
-                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã nhóm không hợp lệ!");
-                }
-                string tenPhim = LoaiBoKyTu.bestLower(model.TenPhim);
-                if (string.IsNullOrEmpty(tenPhim))
-                {
+        //            return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày không hợp lệ, Ngày có định dạng dd/MM/yyyy !", MessageConstant.MESSAGE_ERROR_400);
+        //            //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã nhóm không hợp lệ!");
+        //        }
+        //        string tenPhim = LoaiBoKyTu.bestLower(model.TenPhim);
+        //        if (string.IsNullOrEmpty(tenPhim))
+        //        {
 
-                    return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Tên phim không hợp lệ !", MessageConstant.MESSAGE_ERROR_400);
+        //            return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Tên phim không hợp lệ !", MessageConstant.MESSAGE_ERROR_400);
 
-                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim không hợp lệ!");
-                }
-                var p = db.Phim.Where(n => n.BiDanh == model.BiDanh);
-                if (p.Count() > 1)
-                {
+        //            //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim không hợp lệ!");
+        //        }
+        //        var p = db.Phim.Where(n => n.BiDanh == model.BiDanh);
+        //        if (p.Count() > 1)
+        //        {
 
-                    return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tên phim đã tồn tại !", MessageConstant.MESSAGE_ERROR_500);
+        //            return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tên phim đã tồn tại !", MessageConstant.MESSAGE_ERROR_500);
 
-                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim đã tồn tại!");
-                }
+        //            //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim đã tồn tại!");
+        //        }
 
 
-                PhimInsertNew phimNew = Mapper.Map<PhimInsert, PhimInsertNew>(model);
-                Phim modelInsert = Mapper.Map<PhimInsertNew, Phim>(phimNew);
-                modelInsert.BiDanh = LoaiBoKyTu.bestLower(modelInsert.TenPhim);
-                //DateTime temp;
-                //if (DateTime.TryParse(model.NgayKhoiChieu, out temp))
-                //{
-                try
-                {
-                    modelInsert.NgayKhoiChieu = DateTimes.ConvertDate(model.NgayKhoiChieu);
-                }
-                catch (Exception ex)
-                {
+        //        PhimInsertNew phimNew = Mapper.Map<PhimInsert, PhimInsertNew>(model);
+        //        Phim modelInsert = Mapper.Map<PhimInsertNew, Phim>(phimNew);
+        //        modelInsert.BiDanh = LoaiBoKyTu.bestLower(modelInsert.TenPhim);
+        //        //DateTime temp;
+        //        //if (DateTime.TryParse(model.NgayKhoiChieu, out temp))
+        //        //{
+        //        try
+        //        {
+        //            modelInsert.NgayKhoiChieu = DateTimes.ConvertDate(model.NgayKhoiChieu);
+        //        }
+        //        catch (Exception ex)
+        //        {
 
-                    return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy!", MessageConstant.MESSAGE_ERROR_400);
+        //            return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy!", MessageConstant.MESSAGE_ERROR_400);
 
-                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !");
-                }
-                //}
-                //else
-                //{
+        //            //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !");
+        //        }
+        //        //}
+        //        //else
+        //        //{
 
-                //}
+        //        //}
 
-                if (modelInsert.HinhAnh.Split('.').Count() > 1)
-                {
-                    modelInsert.HinhAnh = LoaiBoKyTu.bestLower(modelInsert.TenPhim) + "_" + LoaiBoKyTu.bestLower(modelInsert.MaNhom) + "." + modelInsert.HinhAnh.Split('.')[modelInsert.HinhAnh.Split('.').Length - 1];
-                }
-                else
-                {
-                    //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Hình ảnh không đúng định dạng!");
-                    return new ResponseEntity(StatusCodeConstants.OK, "Hình ảnh không đúng định dạng!", MessageConstant.MESSAGE_SUCCESS_200); 
-                }
-                if (!string.IsNullOrEmpty(modelInsert.Trailer))
-                {
+        //        if (modelInsert.HinhAnh.Split('.').Count() > 1)
+        //        {
+        //            modelInsert.HinhAnh = LoaiBoKyTu.bestLower(modelInsert.TenPhim) + "_" + LoaiBoKyTu.bestLower(modelInsert.MaNhom) + "." + modelInsert.HinhAnh.Split('.')[modelInsert.HinhAnh.Split('.').Length - 1];
+        //        }
+        //        else
+        //        {
+        //            //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Hình ảnh không đúng định dạng!");
+        //            return new ResponseEntity(StatusCodeConstants.OK, "Hình ảnh không đúng định dạng!", MessageConstant.MESSAGE_SUCCESS_200); 
+        //        }
+        //        if (!string.IsNullOrEmpty(modelInsert.Trailer))
+        //        {
 
-                    string newString = modelInsert.Trailer.Replace("https://www.youtube.com/embed/", "♥");
-                    if (newString.Split('♥').Length == 0)
-                    {
-                        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Link trailer không hợp lệ link trailer phải có định dạng: https://www.youtube.com/embed/[thamso]");
-                        return new ResponseEntity(StatusCodeConstants.OK, "Hình ảnh không đúng định dạng!", MessageConstant.MESSAGE_SUCCESS_200); 
-                    }
-                }
-                modelInsert.MaPhim = 0;
-                db.Phim.Add(modelInsert);
-                db.SaveChanges();
+        //            string newString = modelInsert.Trailer.Replace("https://www.youtube.com/embed/", "♥");
+        //            if (newString.Split('♥').Length == 0)
+        //            {
+        //                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Link trailer không hợp lệ link trailer phải có định dạng: https://www.youtube.com/embed/[thamso]");
+        //                return new ResponseEntity(StatusCodeConstants.OK, "Hình ảnh không đúng định dạng!", MessageConstant.MESSAGE_SUCCESS_200); 
+        //            }
+        //        }
+        //        modelInsert.MaPhim = 0;
+        //        db.Phim.Add(modelInsert);
+        //        db.SaveChanges();
 
-                return new ResponseEntity(StatusCodeConstants.OK, modelInsert, MessageConstant.MESSAGE_SUCCESS_200);
-                //return Ok(modelInsert);
-            }
-            catch (Exception ex)
-            {
-                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "thuộc tính hinhAnh không đúng định dạng *.jpg, *.png, *.gif!", MessageConstant.MESSAGE_ERROR_500);
+        //        return new ResponseEntity(StatusCodeConstants.OK, modelInsert, MessageConstant.MESSAGE_SUCCESS_200);
+        //        //return Ok(modelInsert);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "thuộc tính hinhAnh không đúng định dạng *.jpg, *.png, *.gif!", MessageConstant.MESSAGE_ERROR_500);
 
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "thuộc tính hinhAnh không đúng định dạng *.jpg, *.png, *.gif!");
+        //        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "thuộc tính hinhAnh không đúng định dạng *.jpg, *.png, *.gif!");
 
-            }
-        }
+        //    }
+        //}
 
         //private void SetObjectProperty(string propertyName, string value, ref object objName)
         //{
@@ -290,6 +290,10 @@ namespace bookingticketAPI.Controllers
                 PhimUpload model = new PhimUpload();
                 model = (PhimUpload)Convert(frm, model);
                 model.maNhom = model.maNhom.ToUpper();
+                if(string.IsNullOrEmpty(model.maNhom))
+                {
+                    model.maNhom = "GP01";
+                }
 
                 if (Request.Form.Files[0] == null)
                 {
@@ -333,10 +337,13 @@ namespace bookingticketAPI.Controllers
                 modelInsert.DaXoa = false;
                 modelInsert.MaPhim = 0;
                 modelInsert.HinhAnh = LoaiBoKyTu.bestLower(model.tenPhim) + "_" + LoaiBoKyTu.bestLower(model.maNhom) + "." + model.hinhAnh.FileName.Split('.')[model.hinhAnh.FileName.Split('.').Length - 1];
-                modelInsert.MaNhom = LoaiBoKyTu.bestLower(model.maNhom);
+                //modelInsert.MaNhom = LoaiBoKyTu.bestLower(model.maNhom);
                 modelInsert.MoTa = model.moTa;
                 modelInsert.TenPhim = model.tenPhim;
                 modelInsert.Trailer = model.trailer;
+                modelInsert.Hot = model.Hot;
+                modelInsert.SapChieu = model.SapChieu;
+                modelInsert.DangChieu = model.DangChieu;
                 DateTime temp;
                 try
                 {
@@ -456,6 +463,12 @@ namespace bookingticketAPI.Controllers
 
                 phimUpdate.Trailer = model.trailer;
                 phimUpdate.MoTa = model.moTa;
+                phimUpdate.MoTa = model.moTa;
+                phimUpdate.TenPhim = model.tenPhim;
+                phimUpdate.Trailer = model.trailer;
+                phimUpdate.Hot = model.Hot;
+                phimUpdate.SapChieu = model.SapChieu;
+                phimUpdate.DangChieu = model.DangChieu;
                 if (model.hinhAnh != null)
                 {
                     
@@ -517,137 +530,137 @@ namespace bookingticketAPI.Controllers
 
 
 
-        [Authorize(Roles = "QuanTri")]
-        [HttpPost("CapNhatPhim")]
-        public async Task<ResponseEntity>  CapNhatPhim(PhimInsert model)
-        {
-            if (string.IsNullOrEmpty(model.NgayKhoiChieu))
-            {
-                return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !", MessageConstant.MESSAGE_ERROR_400);
+        //[Authorize(Roles = "QuanTri")]
+        //[HttpPost("CapNhatPhim")]
+        //public async Task<ResponseEntity>  CapNhatPhim(PhimInsert model)
+        //{
+        //    if (string.IsNullOrEmpty(model.NgayKhoiChieu))
+        //    {
+        //        return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !", MessageConstant.MESSAGE_ERROR_400);
 
-            }
-            //dbRapChieuPhimContext dbo = new dbRapChieuPhimContext();
-            ////Fixembed
-            //var lstPhim = db.Phim;
-            //foreach (var item in lstPhim)
-            //{
-            //    var p = dbo.Phim.Single(n => n.MaPhim == item.MaPhim);
-            //    string s = item.Trailer.Split('=')[item.Trailer.Split('=').Length - 1];
-            //    p.Trailer = @"https://www.youtube.com/embed/" + s;
+        //    }
+        //    //dbRapChieuPhimContext dbo = new dbRapChieuPhimContext();
+        //    ////Fixembed
+        //    //var lstPhim = db.Phim;
+        //    //foreach (var item in lstPhim)
+        //    //{
+        //    //    var p = dbo.Phim.Single(n => n.MaPhim == item.MaPhim);
+        //    //    string s = item.Trailer.Split('=')[item.Trailer.Split('=').Length - 1];
+        //    //    p.Trailer = @"https://www.youtube.com/embed/" + s;
 
-            //    dbo.SaveChanges();
-            //}
-            model.BiDanh = LoaiBoKyTu.bestLower(model.TenPhim);
-            try
-            {
+        //    //    dbo.SaveChanges();
+        //    //}
+        //    model.BiDanh = LoaiBoKyTu.bestLower(model.TenPhim);
+        //    try
+        //    {
 
-                Phim phimUpdate = db.Phim.SingleOrDefault(n => n.MaPhim == model.MaPhim);
-                if (phimUpdate == null)
-                {
-                    return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Mã phim không tồn tại!", MessageConstant.MESSAGE_ERROR_404);
-                }
-                model.MaNhom = model.MaNhom.ToUpper();
-                bool ckb = db.Nhom.Any(n => n.MaNhom == model.MaNhom);
-                if (!ckb)
-                {
-                    return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Mã nhóm không hợp lệ!", MessageConstant.MESSAGE_ERROR_400);
+        //        Phim phimUpdate = db.Phim.SingleOrDefault(n => n.MaPhim == model.MaPhim);
+        //        if (phimUpdate == null)
+        //        {
+        //            return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Mã phim không tồn tại!", MessageConstant.MESSAGE_ERROR_404);
+        //        }
+        //        model.MaNhom = model.MaNhom.ToUpper();
+        //        bool ckb = db.Nhom.Any(n => n.MaNhom == model.MaNhom);
+        //        if (!ckb)
+        //        {
+        //            return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Mã nhóm không hợp lệ!", MessageConstant.MESSAGE_ERROR_400);
 
-                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã nhóm không hợp lệ!");
-                }
-                string tenPhim = LoaiBoKyTu.bestLower(model.TenPhim);
-                if (string.IsNullOrEmpty(tenPhim))
-                {
-                    return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tên phim không hợp lệ", MessageConstant.MESSAGE_ERROR_500);
+        //            //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã nhóm không hợp lệ!");
+        //        }
+        //        string tenPhim = LoaiBoKyTu.bestLower(model.TenPhim);
+        //        if (string.IsNullOrEmpty(tenPhim))
+        //        {
+        //            return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tên phim không hợp lệ", MessageConstant.MESSAGE_ERROR_500);
 
-                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim không hợp lệ!");
-                }
-                var p = db.Phim.Where(n => n.BiDanh == model.BiDanh);
-                if (p.Count() > 2)
-                {
-                    return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tên phim đã tồn tại!", MessageConstant.MESSAGE_ERROR_500);
+        //            //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim không hợp lệ!");
+        //        }
+        //        var p = db.Phim.Where(n => n.BiDanh == model.BiDanh);
+        //        if (p.Count() > 2)
+        //        {
+        //            return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tên phim đã tồn tại!", MessageConstant.MESSAGE_ERROR_500);
 
-                }
-
-
-                phimUpdate.TenPhim = model.TenPhim;
-                phimUpdate.BiDanh = LoaiBoKyTu.bestLower(model.TenPhim);
-
-                phimUpdate.Trailer = model.Trailer;
-                phimUpdate.MoTa = model.MoTa;
-                phimUpdate.HinhAnh = model.HinhAnh;
-                phimUpdate.DanhGia = model.DanhGia;
-
-                Phim pCu = db.Phim.Where(n => n.MaPhim == model.MaPhim).FirstOrDefault();
-
-                if (string.IsNullOrEmpty(model.HinhAnh))
-                {
-                    if (pCu != null)
-                    {
+        //        }
 
 
-                        phimUpdate.HinhAnh = pCu.HinhAnh;
-                    }
-                }
+        //        phimUpdate.TenPhim = model.TenPhim;
+        //        phimUpdate.BiDanh = LoaiBoKyTu.bestLower(model.TenPhim);
 
-                DateTime temp;
-                try
-                {
-                    try
-                    {
-                        phimUpdate.NgayKhoiChieu = DateTimes.ConvertDate(model.NgayKhoiChieu);
-                    }
-                    catch (Exception ex)
-                    {
-                        return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !!", MessageConstant.MESSAGE_ERROR_400);
+        //        phimUpdate.Trailer = model.Trailer;
+        //        phimUpdate.MoTa = model.MoTa;
+        //        phimUpdate.HinhAnh = model.HinhAnh;
+        //        phimUpdate.DanhGia = model.DanhGia;
 
-                        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !!", MessageConstant.MESSAGE_ERROR_400);
-                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày khởi chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !");
-                }
-                if (model.HinhAnh != null)
-                {
-                    if (model.HinhAnh.Split('.').Count() > 1)
-                    {
-                        phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(phimUpdate.TenPhim) + "_" + LoaiBoKyTu.bestLower(phimUpdate.MaNhom) + "." + phimUpdate.HinhAnh.Split('.')[phimUpdate.HinhAnh.Split('.').Length - 1];
-                    }
-                    else
-                    {
-                        //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Hình ảnh không đúng định dạng!");
-                         return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Hình ảnh không đúng định dạng!", MessageConstant.MESSAGE_ERROR_400); ;
-                    }
-                }
-                if (!string.IsNullOrEmpty(model.Trailer))
-                {
+        //        Phim pCu = db.Phim.Where(n => n.MaPhim == model.MaPhim).FirstOrDefault();
 
-                    string newString = phimUpdate.Trailer.Replace("https://www.youtube.com/embed/", "♥");
-                    if (newString.Split('♥').Length == 0)
-                    {
-                        return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Link trailer không hợp lệ link trailer phải có định dạng: https://www.youtube.com/embed/[thamso]", MessageConstant.MESSAGE_ERROR_400); ;
+        //        if (string.IsNullOrEmpty(model.HinhAnh))
+        //        {
+        //            if (pCu != null)
+        //            {
 
-                        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Link trailer không hợp lệ link trailer phải có định dạng: https://www.youtube.com/embed/[thamso]");
 
-                    }
-                }
-                db.SaveChanges();
-                return new ResponseEntity(StatusCodeConstants.OK, model, MessageConstant.INSERT_SUCCESS); 
-            }
-            catch (Exception ex)
-            {
-                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Dữ liệu không hợp lệ!", MessageConstant.INSERT_ERROR);
+        //                phimUpdate.HinhAnh = pCu.HinhAnh;
+        //            }
+        //        }
 
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Dữ liệu không hợp lệ!");
-            }
-        }
+        //        DateTime temp;
+        //        try
+        //        {
+        //            try
+        //            {
+        //                phimUpdate.NgayKhoiChieu = DateTimes.ConvertDate(model.NgayKhoiChieu);
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !!", MessageConstant.MESSAGE_ERROR_400);
+
+        //                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !");
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !!", MessageConstant.MESSAGE_ERROR_400);
+        //            //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày khởi chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !");
+        //        }
+        //        if (model.HinhAnh != null)
+        //        {
+        //            if (model.HinhAnh.Split('.').Count() > 1)
+        //            {
+        //                phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(phimUpdate.TenPhim) + "_" + LoaiBoKyTu.bestLower(phimUpdate.MaNhom) + "." + phimUpdate.HinhAnh.Split('.')[phimUpdate.HinhAnh.Split('.').Length - 1];
+        //            }
+        //            else
+        //            {
+        //                //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Hình ảnh không đúng định dạng!");
+        //                 return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Hình ảnh không đúng định dạng!", MessageConstant.MESSAGE_ERROR_400); ;
+        //            }
+        //        }
+        //        if (!string.IsNullOrEmpty(model.Trailer))
+        //        {
+
+        //            string newString = phimUpdate.Trailer.Replace("https://www.youtube.com/embed/", "♥");
+        //            if (newString.Split('♥').Length == 0)
+        //            {
+        //                return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Link trailer không hợp lệ link trailer phải có định dạng: https://www.youtube.com/embed/[thamso]", MessageConstant.MESSAGE_ERROR_400); ;
+
+        //                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Link trailer không hợp lệ link trailer phải có định dạng: https://www.youtube.com/embed/[thamso]");
+
+        //            }
+        //        }
+        //        db.SaveChanges();
+        //        return new ResponseEntity(StatusCodeConstants.OK, model, MessageConstant.INSERT_SUCCESS); 
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Dữ liệu không hợp lệ!", MessageConstant.INSERT_ERROR);
+
+        //        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Dữ liệu không hợp lệ!");
+        //    }
+        //}
         [HttpPost]
         public string UploadHinhAnh(IFormFile file, string tenPhim, string maNhom)
         {
-             file = Request.Form.Files[0];
-             tenPhim = Request.Form["tenPhim"];
-             maNhom = Request.Form["maNhom"];
+            file = Request.Form.Files[0];
+            tenPhim = Request.Form["tenPhim"];
+            maNhom = Request.Form["maNhom"];
             //maNhom = maNhom.ToUpper();
             tenPhim = LoaiBoKyTu.bestLower(tenPhim);
 
@@ -715,72 +728,72 @@ namespace bookingticketAPI.Controllers
 
         private const int TenMegaBytes = 1024 * 1024;
 
-        [HttpPost("UploadHinhAnhPhim")]
-        public async Task<ResponseEntity> UploadHinhAnhPhim()
-        {
-            IFormFile file = Request.Form.Files[0];
-            string tenPhim = Request.Form["tenPhim"];
-            string maNhom = Request.Form["maNhom"];
-            //maNhom = maNhom.ToUpper();
-            tenPhim = LoaiBoKyTu.bestLower(tenPhim);
+        //[HttpPost("UploadHinhAnhPhim")]
+        //public async Task<ResponseEntity> UploadHinhAnhPhim()
+        //{
+        //    IFormFile file = Request.Form.Files[0];
+        //    string tenPhim = Request.Form["tenPhim"];
+        //    string maNhom = Request.Form["maNhom"];
+        //    //maNhom = maNhom.ToUpper();
+        //    tenPhim = LoaiBoKyTu.bestLower(tenPhim);
 
-            if (string.IsNullOrEmpty(tenPhim))
-            {
-                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Định dạng file không hợp lệ!", MessageConstant.ERROR);
+        //    if (string.IsNullOrEmpty(tenPhim))
+        //    {
+        //        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Định dạng file không hợp lệ!", MessageConstant.ERROR);
 
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim không hợp lệ");
-            }
-            if (string.IsNullOrEmpty(maNhom) || !db.Nhom.Any(n => n.MaNhom == maNhom))
-            {
-                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Mã nhóm không hợp lệ", MessageConstant.ERROR);
+        //        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim không hợp lệ");
+        //    }
+        //    if (string.IsNullOrEmpty(maNhom) || !db.Nhom.Any(n => n.MaNhom == maNhom))
+        //    {
+        //        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Mã nhóm không hợp lệ", MessageConstant.ERROR);
 
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã nhóm không hợp lệ");
-            }
+        //        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã nhóm không hợp lệ");
+        //    }
 
 
-            if (file.Length > TenMegaBytes)
-            {
-                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Dung lượng file vượt quá 1 MB!", MessageConstant.ERROR);
+        //    if (file.Length > TenMegaBytes)
+        //    {
+        //        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Dung lượng file vượt quá 1 MB!", MessageConstant.ERROR);
 
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Dung lượng file vượt quá 1 MB!");
+        //        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Dung lượng file vượt quá 1 MB!");
 
-            }
-            if (file.ContentType == "image/png" || file.ContentType == "image/jpeg" || file.ContentType == "image/jpg" || file.ContentType == "image/gif")
-            {
-                try
-                {
-                    //tenPhim = LoaiBoKyTu.bestLower(file.FileName);
-                    //Check khoa học
-                    var kh = db.Phim.Where(n => n.BiDanh.Contains(tenPhim));
-                    if (kh.Count() == 0)
-                    {
-                        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Phim không tồn tại không thể upload file", MessageConstant.ERROR);
+        //    }
+        //    if (file.ContentType == "image/png" || file.ContentType == "image/jpeg" || file.ContentType == "image/jpg" || file.ContentType == "image/gif")
+        //    {
+        //        try
+        //        {
+        //            //tenPhim = LoaiBoKyTu.bestLower(file.FileName);
+        //            //Check khoa học
+        //            var kh = db.Phim.Where(n => n.BiDanh.Contains(tenPhim));
+        //            if (kh.Count() == 0)
+        //            {
+        //                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Phim không tồn tại không thể upload file", MessageConstant.ERROR);
 
-                        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Phim không tồn tại không thể upload file");
-                    }
+        //                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Phim không tồn tại không thể upload file");
+        //            }
 
-                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/hinhanh", tenPhim + "_" + LoaiBoKyTu.bestLower(maNhom) + "." + file.FileName.Split('.')[file.FileName.Split('.').Length - 1]);
-                    var stream = new FileStream(path, FileMode.Create);
-                    file.CopyTo(stream);
-                    return new ResponseEntity(StatusCodeConstants.OK, "Upload file thành công", MessageConstant.INSERT_SUCCESS);
+        //            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/hinhanh", tenPhim + "_" + LoaiBoKyTu.bestLower(maNhom) + "." + file.FileName.Split('.')[file.FileName.Split('.').Length - 1]);
+        //            var stream = new FileStream(path, FileMode.Create);
+        //            file.CopyTo(stream);
+        //            return new ResponseEntity(StatusCodeConstants.OK, "Upload file thành công", MessageConstant.INSERT_SUCCESS);
 
-                    //return Ok("Upload file thành công !");
-                }
-                catch
-                {
-                    //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Upload file không thành công!");
-                    return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Upload file không thành công!", MessageConstant.ERROR);
+        //            //return Ok("Upload file thành công !");
+        //        }
+        //        catch
+        //        {
+        //            //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Upload file không thành công!");
+        //            return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Upload file không thành công!", MessageConstant.ERROR);
 
-                    //return response;
-                }
-            }
-            else
-            {
-                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Định dạng file không hợp lệ!", MessageConstant.ERROR);
+        //            //return response;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Định dạng file không hợp lệ!", MessageConstant.ERROR);
 
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Định dạng file không hợp lệ!");
-            }
-        }
+        //        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Định dạng file không hợp lệ!");
+        //    }
+        //}
 
         [Authorize(Roles = "QuanTri")]
         [HttpDelete("XoaPhim")]
