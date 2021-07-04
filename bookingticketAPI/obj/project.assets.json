@@ -13027,11 +13027,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn 1\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
       "projectName": "bookingticketAPI",
-      "projectPath": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn 1\\movieapi.cyberlearn.vn\\bookingticketAPI\\bookingticketAPI.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn\\bookingticketAPI\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\movieapi.cyberlearn.vn 1\\movieapi.cyberlearn.vn\\bookingticketAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
