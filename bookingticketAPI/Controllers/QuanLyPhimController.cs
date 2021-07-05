@@ -307,8 +307,8 @@ namespace bookingticketAPI.Controllers
 
                 model.hinhAnh = Request.Form.Files[0];
                 string request = Request.Form["tenPhim"]; ;
-                bool ckb = db.Nhom.Any(n => n.MaNhom == model.maNhom);
-                if (!ckb)
+                var ckb = db.Nhom.SingleOrDefault(n => n.MaNhom == model.maNhom);
+                if (ckb==null)
                 {
                     return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Mã nhóm không hợp lệ!", MessageConstant.MESSAGE_ERROR_500);
 
