@@ -307,8 +307,8 @@ namespace bookingticketAPI.Controllers
 
                 model.hinhAnh = Request.Form.Files[0];
                 string request = Request.Form["tenPhim"]; ;
-                var ckb = db.Nhom.SingleOrDefault(n => n.MaNhom == model.maNhom);
-                if (ckb==null)
+                bool ckb = db.Nhom.Any(n => n.MaNhom == model.maNhom);
+                if (!ckb)
                 {
                     return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Mã nhóm không hợp lệ!", MessageConstant.MESSAGE_ERROR_500);
 
@@ -706,7 +706,7 @@ namespace bookingticketAPI.Controllers
                     var stream = new FileStream(path, FileMode.Create);
                     file.CopyTo(stream);
                     //return new ResponseEntity(StatusCodeConstants.OK, "Upload file thành công!", MessageConstant.MESSAGE_SUCCESS_200);
-                    return "Upload file thành công!";
+                    return "";
 
                 }
                 catch
