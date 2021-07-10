@@ -12,7 +12,8 @@ using bookingticketAPI.Models.ViewModel;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using AutoMapper;
-using System.Linq;
+using 
+    System.Linq;
 using static bookingticketAPI.Common;
 using ReflectionIT.Mvc.Paging;
 using System.IO;
@@ -847,6 +848,7 @@ namespace bookingticketAPI.Controllers
             chiTietPhim.DanhGia = phim.DanhGia;
             chiTietPhim.HinhAnh = DomainImage + phim.HinhAnh;
             chiTietPhim.MaNhom = phim.MaNhom;
+            chiTietPhim.TenPhim = phim.TenPhim;
             chiTietPhim.MaPhim = phim.MaPhim;
             chiTietPhim.MoTa = phim.MoTa;
             chiTietPhim.Trailer = phim.Trailer;
