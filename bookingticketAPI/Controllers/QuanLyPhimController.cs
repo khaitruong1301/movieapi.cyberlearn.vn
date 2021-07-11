@@ -449,13 +449,13 @@ namespace bookingticketAPI.Controllers
 
                     //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim không hợp lệ!");
                 }
-                var p = db.Phim.Where(n => n.BiDanh == model.biDanh);
-                int length = p.Count();
-                //if (p.Count() > 2)
-                //{
-                //    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim đã tồn tại!");
-                //}
-
+                var p = db.Phim.Any(n => n.BiDanh == model.biDanh && n.MaPhim != model.maPhim);
+                if (p)
+                {
+                    return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tên phim đã tồn tại!", MessageConstant.MESSAGE_ERROR_500);
+                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim đã tồn tại!");
+                }
+                model.tenPhim = Request.Form["tenPhim"];
 
                 phimUpdate.TenPhim = model.tenPhim;
                 phimUpdate.BiDanh = LoaiBoKyTu.bestLower(model.tenPhim);
@@ -481,6 +481,7 @@ namespace bookingticketAPI.Controllers
                             //return await tbl.TBLoi(ThongBaoLoi.Loi500, kq);
                         }
                 }
+              
                 DateTime temp;
                 try
                 {

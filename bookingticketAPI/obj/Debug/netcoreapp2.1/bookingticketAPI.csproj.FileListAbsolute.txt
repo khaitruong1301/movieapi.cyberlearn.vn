@@ -15,4 +15,3 @@ C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticke
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.dll
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.pdb
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.genruntimeconfig.cache
-C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Debug\netcoreapp2.1\bookingticketAPI.csprojAssemblyReference.cache
