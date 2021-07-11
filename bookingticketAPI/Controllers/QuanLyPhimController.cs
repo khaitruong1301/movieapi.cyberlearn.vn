@@ -415,10 +415,7 @@ namespace bookingticketAPI.Controllers
             model = (PhimUpload)Convert(frm, model);
             model.maPhim = int.Parse(frm["maPhim"]);
             model.maNhom = model.maNhom.ToUpper();
-            if (Request.Form.Files.Count() > 0)
-            {
-                model.hinhAnh = Request.Form.Files[0];
-            }
+         
 
             if (string.IsNullOrEmpty(model.ngayKhoiChieu))
             {
@@ -469,7 +466,8 @@ namespace bookingticketAPI.Controllers
                 phimUpdate.Hot = Boolean.Parse(model.hot);
                 phimUpdate.SapChieu = Boolean.Parse(model.sapChieu);
                 phimUpdate.DangChieu = Boolean.Parse(model.dangChieu);
-                if (Request.Form.Files.Count() > 0)
+                phimUpdate.MaNhom = model.maNhom;
+                if (Request.Form.Files.Count() != 0)
                 {
                     
 
