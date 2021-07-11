@@ -475,7 +475,7 @@ namespace bookingticketAPI.Controllers
 
                     //phimUpdate.HinhAnh = model.HinhAnh;
                     phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(model.tenPhim) + "_" + LoaiBoKyTu.bestLower(model.maNhom) + "." + model.hinhAnh.FileName.Split('.')[model.hinhAnh.FileName.Split('.').Length - 1];
-                    string kq = UploadHinhAnhCapNhat(model.hinhAnh, model.tenPhim, model.maNhom);
+                    string kq = UploadHinhAnh(model.hinhAnh, model.tenPhim, model.maNhom);
                     if (kq.Trim() != "")
                     {
                         return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, kq, MessageConstant.MESSAGE_ERROR_500);
@@ -657,75 +657,12 @@ namespace bookingticketAPI.Controllers
         //}
         private const int TenMegaBytes = 1024 * 1024;
 
-
-        public string UploadHinhAnhCapNhat(IFormFile file, string tenPhim, string maNhom)
-        {
-            file = Request.Form.Files[0];
-            tenPhim = Request.Form["tenPhim"];
-            maNhom = Request.Form["maNhom"];
-            //maNhom = maNhom.ToUpper();
-            tenPhim = LoaiBoKyTu.bestLower(tenPhim);
-
-            if (string.IsNullOrEmpty(tenPhim))
-            {
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Tên phim không hợp lệ");
-
-                //return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tên phim không hợp lệ", MessageConstant.INSERT_ERROR);
-
-                return "Tên phim không hợp lệ";
-
-            }
-            if (string.IsNullOrEmpty(maNhom) || !db.Nhom.Any(n => n.MaNhom == maNhom))
-            {
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã nhóm không hợp lệ");
-                //return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Mã nhóm không hợp lệ", MessageConstant.INSERT_ERROR);
-
-                return "Mã nhóm không hợp lệ";
-            }
-
-
-            if (file.Length > TenMegaBytes)
-            {
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Dung lượng file vượt quá 1 MB!");
-                //return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Dung lượng file vượt quá 1 MB!", MessageConstant.INSERT_ERROR);
-
-                return "Dung lượng file vượt quá 1 MB!";
-            }
-            if (file.ContentType == "image/png" || file.ContentType == "image/jpeg" || file.ContentType == "image/jpg" || file.ContentType == "image/gif")
-            {
-                try
-                {
-                 
-
-                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/hinhanh", tenPhim + "_" + LoaiBoKyTu.bestLower(maNhom) + "." + file.FileName.Split('.')[file.FileName.Split('.').Length - 1]);
-                    var stream = new FileStream(path, FileMode.Create);
-                    file.CopyTo(stream);
-                    return "";
-
-                }
-                catch
-                {
-                    //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Upload file không thành công!");
-                    //return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Upload file thành công!", MessageConstant.ERROR);
-                    return "Upload file không thành công!";
-
-                    //return "Upload file không thành công!";
-                }
-            }
-            else
-            {
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Định dạng file không hợp lệ!");
-                //return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Định dạng file không hợp lệ!", MessageConstant.ERROR);
-
-                return "Định dạng file không hợp lệ!";
-            }
-        }
         [HttpPost]
         public string UploadHinhAnh(IFormFile file, string tenPhim, string maNhom)
         {
-            file = Request.Form.Files[0];
-            tenPhim = Request.Form["tenPhim"];
-            maNhom = Request.Form["maNhom"];
+            //file = Request.Form.Files[0];
+            //tenPhim = Request.Form["tenPhim"];
+            //maNhom = Request.Form["maNhom"];
             //maNhom = maNhom.ToUpper();
             tenPhim = LoaiBoKyTu.bestLower(tenPhim);
 
@@ -769,6 +706,7 @@ namespace bookingticketAPI.Controllers
                     var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/hinhanh", tenPhim + "_" + LoaiBoKyTu.bestLower(maNhom) + "." + file.FileName.Split('.')[file.FileName.Split('.').Length - 1]);
                     var stream = new FileStream(path, FileMode.Create);
                     file.CopyTo(stream);
+
                     //return new ResponseEntity(StatusCodeConstants.OK, "Upload file thành công!", MessageConstant.MESSAGE_SUCCESS_200);
                     return "";
 
