@@ -55,7 +55,24 @@ namespace bookingticketAPI.Models.ViewModel
         public IFormFile hinhAnh { get; set; }
 
     }
+    public class PhimUploadResult
+    {
+        public int maPhim { get; set; }
+        public string tenPhim { get; set; }
+        public string biDanh { get; set; }
+        public string trailer { get; set; }
+        public string moTa { get; set; }
+        public string maNhom { get; set; }
+        public DateTime ngayKhoiChieu  { get; set; }
+    public bool DaXoa { get; set; }
 
+        public bool sapChieu { get; set; }
+        public bool dangChieu { get; set; }
+        public bool hot { get; set; }
+        public int danhGia { get; set; }
+        public string hinhAnh { get; set; }
+
+    }
     public class PhimInsertNew
     {
         public int MaPhim { get; set; }

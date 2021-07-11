@@ -395,7 +395,7 @@ namespace bookingticketAPI.Controllers
 
                 db.SaveChanges();
 
-                return new ResponseEntity(StatusCodeConstants.OK, kq, MessageConstant.MESSAGE_SUCCESS_200);
+                return new ResponseEntity(StatusCodeConstants.OK, new PhimUploadResult { maPhim = modelInsert.MaPhim, tenPhim = modelInsert.TenPhim, dangChieu = (bool)modelInsert.DangChieu, sapChieu = (bool)modelInsert.SapChieu, hot = (bool)modelInsert.Hot, moTa = modelInsert.MoTa, ngayKhoiChieu = modelInsert.NgayKhoiChieu.Value, trailer = modelInsert.Trailer, danhGia = modelInsert.DanhGia.Value, maNhom = modelInsert.MaNhom, hinhAnh = DomainImage + modelInsert.HinhAnh }, MessageConstant.MESSAGE_SUCCESS_200);
 
                 //return Ok(modelInsert);
             }
@@ -516,7 +516,7 @@ namespace bookingticketAPI.Controllers
                     }
                 }
                 db.SaveChanges();
-                return new ResponseEntity(StatusCodeConstants.OK, model, MessageConstant.MESSAGE_SUCCESS_200);
+                return new ResponseEntity(StatusCodeConstants.OK, new PhimUploadResult { maPhim = phimUpdate.MaPhim, tenPhim = phimUpdate.TenPhim, dangChieu = (bool)phimUpdate.DangChieu, sapChieu = (bool)phimUpdate.SapChieu, hot = (bool)phimUpdate.Hot, moTa = phimUpdate.MoTa, ngayKhoiChieu = phimUpdate.NgayKhoiChieu.Value, trailer = phimUpdate.Trailer, danhGia = phimUpdate.DanhGia.Value, maNhom = phimUpdate.MaNhom, hinhAnh = DomainImage + phimUpdate.HinhAnh }, MessageConstant.MESSAGE_SUCCESS_200);
 
                 //return Ok(model);
             }
