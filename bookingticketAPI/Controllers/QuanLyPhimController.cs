@@ -463,14 +463,11 @@ namespace bookingticketAPI.Controllers
                 phimUpdate.TenPhim = model.tenPhim;
                 phimUpdate.BiDanh = LoaiBoKyTu.bestLower(model.tenPhim);
 
-                phimUpdate.Trailer = model.trailer;
                 phimUpdate.MoTa = model.moTa;
-                phimUpdate.MoTa = model.moTa;
-                phimUpdate.TenPhim = model.tenPhim;
                 phimUpdate.Trailer = model.trailer;
-                phimUpdate.Hot = model.Hot;
-                phimUpdate.SapChieu = model.SapChieu;
-                phimUpdate.DangChieu = model.DangChieu;
+                phimUpdate.Hot = model.hot;
+                phimUpdate.SapChieu = model.sapChieu;
+                phimUpdate.DangChieu = model.dangChieu;
                 if (model.hinhAnh != null)
                 {
 
