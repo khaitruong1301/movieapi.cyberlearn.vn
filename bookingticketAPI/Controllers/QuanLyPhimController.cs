@@ -840,7 +840,7 @@ namespace bookingticketAPI.Controllers
                 //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã phim không hợp lệ!");
             }
             Phim phim = db.Phim.Single(n => n.MaPhim == MaPhim);
-            ChiTietPhimVM chiTietPhim = new ChiTietPhimVM();
+            ChiTietPhimViewModel chiTietPhim = new ChiTietPhimViewModel();
             chiTietPhim.BiDanh = phim.BiDanh;
             chiTietPhim.DanhGia = phim.DanhGia;
             chiTietPhim.HinhAnh = DomainImage + phim.HinhAnh;
@@ -854,29 +854,6 @@ namespace bookingticketAPI.Controllers
             chiTietPhim.DangChieu = phim.DangChieu;
             chiTietPhim.SapChieu = phim.SapChieu;
 
-            var lst = db.LichChieu.Where(n => n.MaPhim == MaPhim);
-            if (lst.Count() > 0)
-            {
-                foreach (var lichChieu in lst)
-                {
-                    ThongTinLichChieu thongTinLC = new ThongTinLichChieu();
-                    thongTinLC.GiaVe = lichChieu.GiaVe;
-                    thongTinLC.MaLichChieu = lichChieu.MaLichChieu;
-                    thongTinLC.MaPhim = lichChieu.MaPhim;
-                    thongTinLC.MaRap = lichChieu.MaRap;
-                    thongTinLC.NgayChieuGioChieu = lichChieu.NgayChieuGioChieu;
-                    thongTinLC.TenPhim = lichChieu.MaPhimNavigation.TenPhim;
-                    thongTinLC.ThoiLuong = lichChieu.ThoiLuong;
-                    thongTinLC.ThongTinRap.MaCumRap = lichChieu.MaRapNavigation.MaCumRap;
-                    thongTinLC.ThongTinRap.MaHeThongRap = lichChieu.MaRapNavigation.MaCumRapNavigation.MaHeThongRap;
-                    thongTinLC.ThongTinRap.MaRap = lichChieu.MaRap;
-                    thongTinLC.ThongTinRap.TenRap = lichChieu.MaRapNavigation.TenRap;
-                    thongTinLC.ThongTinRap.TenCumRap = lichChieu.MaRapNavigation.MaCumRapNavigation.TenCumRap;
-                    thongTinLC.ThongTinRap.TenHeThongRap = lichChieu.MaRapNavigation.MaCumRapNavigation.MaHeThongRapNavigation.TenHeThongRap;
-
-                    chiTietPhim.LichChieu.Add(thongTinLC);
-                }
-            }
             return new ResponseEntity(StatusCodeConstants.OK, chiTietPhim, MessageConstant.MESSAGE_SUCCESS_200);
 
             //return Ok(chiTietPhim);
