@@ -296,15 +296,13 @@ namespace bookingticketAPI.Controllers
                 {
                     model.maNhom = "GP01";
                 }
-                if (Request.Form.Files.Count > 0)
+                if (Request.Form.Files.Count() == 0)
                 {
-                    if (Request.Form.Files[0].FileName == "")
-                    {
+                    
                         return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Chưa chọn hình ảnh !", MessageConstant.MESSAGE_ERROR_500);
 
                         //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Chưa chọn hình ảnh !");
 
-                    }
                 }
 
                 model.hinhAnh = Request.Form.Files[0];
@@ -471,7 +469,7 @@ namespace bookingticketAPI.Controllers
                 phimUpdate.Hot = Boolean.Parse(model.hot);
                 phimUpdate.SapChieu = Boolean.Parse(model.sapChieu);
                 phimUpdate.DangChieu = Boolean.Parse(model.dangChieu);
-                if (Request.Form.Files.Count > 0)
+                if (Request.Form.Files.Count() > 0)
                 {
                     if (Request.Form.Files[0].FileName != "")
                     {
