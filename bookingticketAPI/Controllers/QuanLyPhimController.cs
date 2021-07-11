@@ -415,7 +415,7 @@ namespace bookingticketAPI.Controllers
             model = (PhimUpload)Convert(frm, model);
             model.maPhim = int.Parse(frm["maPhim"]);
             model.maNhom = model.maNhom.ToUpper();
-            if (Request.Form.Files.Count > 0)
+            if (Request.Form.Files.Count() > 0)
             {
                 model.hinhAnh = Request.Form.Files[0];
             }
@@ -471,8 +471,7 @@ namespace bookingticketAPI.Controllers
                 phimUpdate.DangChieu = Boolean.Parse(model.dangChieu);
                 if (Request.Form.Files.Count() > 0)
                 {
-                    if (Request.Form.Files[0].FileName != "")
-                    {
+                    
 
                         //phimUpdate.HinhAnh = model.HinhAnh;
                         phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(phimUpdate.TenPhim) + "_" + LoaiBoKyTu.bestLower(phimUpdate.MaNhom) + "." + Request.Form.Files[0].FileName.Split('.')[Request.Form.Files[0].FileName.Split('.').Length - 1];
@@ -483,7 +482,6 @@ namespace bookingticketAPI.Controllers
 
                             //return await tbl.TBLoi(ThongBaoLoi.Loi500, kq);
                         }
-                    }
                 }
                 DateTime temp;
                 try

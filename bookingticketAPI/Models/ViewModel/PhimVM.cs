@@ -59,7 +59,6 @@ namespace bookingticketAPI.Models.ViewModel
     {
         public int maPhim { get; set; }
         public string tenPhim { get; set; }
-        public string biDanh { get; set; }
         public string trailer { get; set; }
         public string moTa { get; set; }
         public string maNhom { get; set; }
