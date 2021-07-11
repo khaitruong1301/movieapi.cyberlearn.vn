@@ -663,7 +663,7 @@ namespace bookingticketAPI.Controllers
             //file = Request.Form.Files[0];
             //tenPhim = Request.Form["tenPhim"];
             //maNhom = Request.Form["maNhom"];
-            //maNhom = maNhom.ToUpper();
+            maNhom = maNhom.ToUpper();
             tenPhim = LoaiBoKyTu.bestLower(tenPhim);
 
             if (string.IsNullOrEmpty(tenPhim))
