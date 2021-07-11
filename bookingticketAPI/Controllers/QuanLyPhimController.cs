@@ -335,7 +335,6 @@ namespace bookingticketAPI.Controllers
                 //PhimInsertNew phimNew = Mapper.Map<PhimInsert, PhimInsertNew>(model)
                 Phim modelInsert = new Phim();
                 modelInsert.BiDanh = LoaiBoKyTu.bestLower(model.tenPhim);
-                modelInsert.DanhGia = model.danhGia;
                 modelInsert.DaXoa = false;
                 modelInsert.MaPhim = 0;
                 modelInsert.HinhAnh = LoaiBoKyTu.bestLower(model.tenPhim) + "_" + LoaiBoKyTu.bestLower(model.maNhom) + "." + model.hinhAnh.FileName.Split('.')[model.hinhAnh.FileName.Split('.').Length - 1];
@@ -343,9 +342,11 @@ namespace bookingticketAPI.Controllers
                 modelInsert.MoTa = model.moTa;
                 modelInsert.TenPhim = model.tenPhim;
                 modelInsert.Trailer = model.trailer;
-                modelInsert.Hot = model.hot;
-                modelInsert.SapChieu = model.sapChieu;
-                modelInsert.DangChieu = model.dangChieu;
+                modelInsert.DanhGia = int.Parse(model.danhGia);
+
+                modelInsert.Hot = Boolean.Parse(model.hot);
+                modelInsert.SapChieu = Boolean.Parse(model.sapChieu);
+                modelInsert.DangChieu = Boolean.Parse(model.dangChieu);
                 DateTime temp;
                 try
                 {
@@ -465,9 +466,10 @@ namespace bookingticketAPI.Controllers
 
                 phimUpdate.MoTa = model.moTa;
                 phimUpdate.Trailer = model.trailer;
-                phimUpdate.Hot = model.hot;
-                phimUpdate.SapChieu = model.sapChieu;
-                phimUpdate.DangChieu = model.dangChieu;
+                phimUpdate.DanhGia = int.Parse(model.danhGia);
+                phimUpdate.Hot = Boolean.Parse(model.hot);
+                phimUpdate.SapChieu = Boolean.Parse(model.sapChieu);
+                phimUpdate.DangChieu = Boolean.Parse(model.dangChieu);
                 if (model.hinhAnh != null)
                 {
 
@@ -481,7 +483,6 @@ namespace bookingticketAPI.Controllers
                         //return await tbl.TBLoi(ThongBaoLoi.Loi500, kq);
                     }
                 }
-                phimUpdate.DanhGia = model.danhGia;
                 DateTime temp;
                 try
                 {

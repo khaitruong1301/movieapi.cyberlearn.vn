@@ -48,10 +48,10 @@ namespace bookingticketAPI.Models.ViewModel
         public string ngayKhoiChieu = "10/10/2020";
         public bool DaXoa = false;
 
-        public bool sapChieu = true;
-        public bool dangChieu = true;
-        public bool hot = true;
-        public int danhGia = 10;
+        public string sapChieu = "true";
+        public string dangChieu = "true";
+        public string hot = "true";
+        public string danhGia = "10";
         public IFormFile hinhAnh { get; set; }
 
     }
