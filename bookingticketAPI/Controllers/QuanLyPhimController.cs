@@ -474,7 +474,7 @@ namespace bookingticketAPI.Controllers
                 {
 
                     //phimUpdate.HinhAnh = model.HinhAnh;
-                    phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(model.tenPhim) + "_" + LoaiBoKyTu.bestLower(model.maNhom) + "." + model.hinhAnh.FileName.Split('.')[model.hinhAnh.FileName.Split('.').Length - 1];
+                    phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(phimUpdate.TenPhim) + "_" + LoaiBoKyTu.bestLower(phimUpdate.MaNhom) + "." + Request.Form.Files[0].FileName.Split('.')[Request.Form.Files[0].FileName.Split('.').Length - 1];
                     string kq = UploadHinhAnh(Request.Form.Files[0], phimUpdate.TenPhim, phimUpdate.MaNhom);
                     if (kq.Trim() != "")
                     {
