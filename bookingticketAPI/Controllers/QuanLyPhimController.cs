@@ -381,7 +381,7 @@ namespace bookingticketAPI.Controllers
                     }
                 }
                 db.Phim.Add(modelInsert);
-                string kq = UploadHinhAnh(model.hinhAnh, modelInsert.TenPhim, modelInsert.MaNhom);
+                string kq = UploadHinhAnh(Request.Form.Files[0], modelInsert.TenPhim, model.maNhom);
                 if (kq != "")
                 {
 
@@ -475,7 +475,7 @@ namespace bookingticketAPI.Controllers
 
                     //phimUpdate.HinhAnh = model.HinhAnh;
                     phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(model.tenPhim) + "_" + LoaiBoKyTu.bestLower(model.maNhom) + "." + model.hinhAnh.FileName.Split('.')[model.hinhAnh.FileName.Split('.').Length - 1];
-                    string kq = UploadHinhAnh(model.hinhAnh, phimUpdate.TenPhim, phimUpdate.MaNhom);
+                    string kq = UploadHinhAnh(Request.Form.Files[0], phimUpdate.TenPhim, phimUpdate.MaNhom);
                     if (kq.Trim() != "")
                     {
                         return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, kq, MessageConstant.MESSAGE_ERROR_500);
