@@ -475,7 +475,7 @@ namespace bookingticketAPI.Controllers
 
                     //phimUpdate.HinhAnh = model.HinhAnh;
                     phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(model.tenPhim) + "_" + LoaiBoKyTu.bestLower(model.maNhom) + "." + model.hinhAnh.FileName.Split('.')[model.hinhAnh.FileName.Split('.').Length - 1];
-                    string kq = UploadHinhAnh(model.hinhAnh, model.tenPhim, model.maNhom);
+                    string kq = UploadHinhAnh(model.hinhAnh, phimUpdate.TenPhim, phimUpdate.MaNhom);
                     if (kq.Trim() != "")
                     {
                         return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, kq, MessageConstant.MESSAGE_ERROR_500);
@@ -695,35 +695,25 @@ namespace bookingticketAPI.Controllers
             {
                 try
                 {
-                    //tenPhim = LoaiBoKyTu.bestLower(file.FileName);
-                    //Check khoa học
-                    //var kh = db.Phim.Where(n => n.BiDanh.Contains(tenPhim));
-                    //if (kh.Count() == 0)
-                    //{
-                    //    return await tbl.TBLoi(ThongBaoLoi.Loi500, "Phim không tồn tại không thể upload file");
-                    //}
+                   
 
                     var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/hinhanh", tenPhim + "_" + LoaiBoKyTu.bestLower(maNhom) + "." + file.FileName.Split('.')[file.FileName.Split('.').Length - 1]);
                     var stream = new FileStream(path, FileMode.Create);
                     file.CopyTo(stream);
 
-                    //return new ResponseEntity(StatusCodeConstants.OK, "Upload file thành công!", MessageConstant.MESSAGE_SUCCESS_200);
                     return "";
 
                 }
                 catch
                 {
-                    //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Upload file không thành công!");
-                    //return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Upload file thành công!", MessageConstant.ERROR);
+                  
                     return "Upload file không thành công!";
 
-                    //return "Upload file không thành công!";
                 }
             }
             else
             {
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Định dạng file không hợp lệ!");
-                //return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Định dạng file không hợp lệ!", MessageConstant.ERROR);
+              
 
                 return "Định dạng file không hợp lệ!";
             }
