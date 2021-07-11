@@ -343,9 +343,9 @@ namespace bookingticketAPI.Controllers
                 modelInsert.MoTa = model.moTa;
                 modelInsert.TenPhim = model.tenPhim;
                 modelInsert.Trailer = model.trailer;
-                modelInsert.Hot = model.Hot;
-                modelInsert.SapChieu = model.SapChieu;
-                modelInsert.DangChieu = model.DangChieu;
+                modelInsert.Hot = model.hot;
+                modelInsert.SapChieu = model.sapChieu;
+                modelInsert.DangChieu = model.dangChieu;
                 DateTime temp;
                 try
                 {
