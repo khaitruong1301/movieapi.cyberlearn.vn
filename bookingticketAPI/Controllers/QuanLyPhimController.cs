@@ -470,7 +470,7 @@ namespace bookingticketAPI.Controllers
                 phimUpdate.Hot = Boolean.Parse(model.hot);
                 phimUpdate.SapChieu = Boolean.Parse(model.sapChieu);
                 phimUpdate.DangChieu = Boolean.Parse(model.dangChieu);
-                if (model.hinhAnh != null)
+                if (Request.Form.Files[0] != null)
                 {
 
                     //phimUpdate.HinhAnh = model.HinhAnh;
