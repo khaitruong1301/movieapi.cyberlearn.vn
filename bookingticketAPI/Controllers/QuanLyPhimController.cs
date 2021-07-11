@@ -296,15 +296,16 @@ namespace bookingticketAPI.Controllers
                 {
                     model.maNhom = "GP01";
                 }
-
-                if (Request.Form.Files[0].Length == 0)
+                if (Request.Form.Files.Count > 0)
                 {
-                    return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Chưa chọn hình ảnh !", MessageConstant.MESSAGE_ERROR_500);
+                    if (Request.Form.Files[0].FileName == "")
+                    {
+                        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Chưa chọn hình ảnh !", MessageConstant.MESSAGE_ERROR_500);
 
-                    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Chưa chọn hình ảnh !");
+                        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Chưa chọn hình ảnh !");
 
+                    }
                 }
-
 
                 model.hinhAnh = Request.Form.Files[0];
                 string request = Request.Form["tenPhim"]; ;
@@ -470,17 +471,20 @@ namespace bookingticketAPI.Controllers
                 phimUpdate.Hot = Boolean.Parse(model.hot);
                 phimUpdate.SapChieu = Boolean.Parse(model.sapChieu);
                 phimUpdate.DangChieu = Boolean.Parse(model.dangChieu);
-                if (Request.Form.Files[0].Length != 0)
+                if (Request.Form.Files.Count > 0)
                 {
-
-                    //phimUpdate.HinhAnh = model.HinhAnh;
-                    phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(phimUpdate.TenPhim) + "_" + LoaiBoKyTu.bestLower(phimUpdate.MaNhom) + "." + Request.Form.Files[0].FileName.Split('.')[Request.Form.Files[0].FileName.Split('.').Length - 1];
-                    string kq = UploadHinhAnh(Request.Form.Files[0], phimUpdate.TenPhim, phimUpdate.MaNhom);
-                    if (kq.Trim() != "")
+                    if (Request.Form.Files[0].FileName != "")
                     {
-                        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, kq, MessageConstant.MESSAGE_ERROR_500);
 
-                        //return await tbl.TBLoi(ThongBaoLoi.Loi500, kq);
+                        //phimUpdate.HinhAnh = model.HinhAnh;
+                        phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(phimUpdate.TenPhim) + "_" + LoaiBoKyTu.bestLower(phimUpdate.MaNhom) + "." + Request.Form.Files[0].FileName.Split('.')[Request.Form.Files[0].FileName.Split('.').Length - 1];
+                        string kq = UploadHinhAnh(Request.Form.Files[0], phimUpdate.TenPhim, phimUpdate.MaNhom);
+                        if (kq.Trim() != "")
+                        {
+                            return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, kq, MessageConstant.MESSAGE_ERROR_500);
+
+                            //return await tbl.TBLoi(ThongBaoLoi.Loi500, kq);
+                        }
                     }
                 }
                 DateTime temp;
