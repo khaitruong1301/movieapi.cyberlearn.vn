@@ -4,6 +4,7 @@ C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticke
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\155.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\188.png
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\2.jpg
+C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\23132_gp01.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\3.png
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\32_gp01.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\33.jpg
@@ -16,6 +17,7 @@ C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticke
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\batmanvssuperman.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\betafish.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\bhd-star-cineplex.png
+C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\black-widoww-123_gp01.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\cgv.png
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\chuyen-ngay-xua-o-hollywood_gp10.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\cinestar.png

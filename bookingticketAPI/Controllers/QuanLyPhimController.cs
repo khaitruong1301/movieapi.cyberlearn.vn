@@ -296,7 +296,7 @@ namespace bookingticketAPI.Controllers
                 {
                     model.maNhom = "GP01";
                 }
-                if (Request.Form.Files[0] == null || Request.Form.Files[0].Length <= 0 )
+                if (Request.Form.Files.Count == 0 )
                 {
                     
                         return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Chưa chọn hình ảnh !", MessageConstant.MESSAGE_ERROR_500);
@@ -467,7 +467,7 @@ namespace bookingticketAPI.Controllers
                 phimUpdate.SapChieu = Boolean.Parse(model.sapChieu);
                 phimUpdate.DangChieu = Boolean.Parse(model.dangChieu);
                 phimUpdate.MaNhom = model.maNhom;
-                if (Request.Form.Files[0] != null && Request.Form.Files[0].Length > 0) { 
+                    if (Request.Form.Files.Count > 0) { 
 
                     //phimUpdate.HinhAnh = model.HinhAnh;
                     phimUpdate.HinhAnh = LoaiBoKyTu.bestLower(phimUpdate.TenPhim) + "_" + LoaiBoKyTu.bestLower(phimUpdate.MaNhom) + "." + Request.Form.Files[0].FileName.Split('.')[Request.Form.Files[0].FileName.Split('.').Length - 1];
