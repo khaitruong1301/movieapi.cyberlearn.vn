@@ -701,7 +701,7 @@ namespace bookingticketAPI.Controllers
                     return "";
 
                 }
-                catch
+                catch(Exception ex)
                 {
                   
                     return "Upload file không thành công!";
