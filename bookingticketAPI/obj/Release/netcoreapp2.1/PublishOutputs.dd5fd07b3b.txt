@@ -17,7 +17,10 @@ C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticke
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\batmanvssuperman.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\betafish.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\bhd-star-cineplex.png
+C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\black-widoww-111_gp01.jpg
+C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\black-widoww-12312d_gp01.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\black-widoww-123_gp01.jpg
+C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\black-widoww-999_gp01.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\cgv.png
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\chuyen-ngay-xua-o-hollywood_gp10.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\cinestar.png
