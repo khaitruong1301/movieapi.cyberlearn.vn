@@ -799,7 +799,7 @@ namespace bookingticketAPI.Controllers
             bool ckbLichChieu = db.LichChieu.Any(n => n.MaPhim == MaPhim);
             if (ckbLichChieu)
             {
-                return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Phim đã xếp lịch chiếu không thể xóa!", MessageConstant.MESSAGE_ERROR_404);
+                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Phim đã xếp lịch chiếu không thể xóa!", MessageConstant.MESSAGE_ERROR_500);
 
                 //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Phim đã xếp lịch chiếu không thể xóa");
             }
