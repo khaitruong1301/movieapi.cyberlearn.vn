@@ -41,7 +41,6 @@ C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticke
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\minions.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\southpaw.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\specter2.jpg
-C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\spectre.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\t3434343d-59rtgredfgdfgdfdgdfgdf_gp01.jpg
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\ted-22_gp06.png
 C:\Users\HP\Desktop\movieapi.cyberlearn.vn 1\movieapi.cyberlearn.vn\bookingticketAPI\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\hinhanh\ted-232132198_gp15.jpg
