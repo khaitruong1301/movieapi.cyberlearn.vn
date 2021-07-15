@@ -156,38 +156,33 @@ namespace bookingticketAPI.Controllers
 
                 //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy !");
             }
-            //DateTime temp;
-            //try
-            //{
+          
 
-            //    if (DateTime.TryParse(lich.NgayChieuGioChieu, out temp))
-            //    {
-            //        lichModel.NgayChieuGioChieu = DateTimes.ConvertDateHour(lich.NgayChieuGioChieu);
-            //    }
-            //    else
-            //    {
-            //        return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày chiếu giờ chiếu không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy hh:mm:ss !");
-            //    }
-            //}
-            //catch (Exception ex)
+            //var ckRap = db.Rap.SingleOrDefault(n => n.MaRap == lich.MaRap);
+            //if (ckRap == null)
             //{
-            //    return await tbl.TBLoi(ThongBaoLoi.Loi500, "Ngày chiếu giờ chiếu  không hợp lệ, Ngày chiếu phải có định dạng dd/MM/yyyy hh:mm:ss!");
+            //        return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Mã rạp không tồn tại !", MessageConstant.MESSAGE_ERROR_404);
+            //    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã rạp không tồn tại !");
             //}
 
-            var ckRap = db.Rap.SingleOrDefault(n => n.MaRap == lich.MaRap);
-            if (ckRap == null)
-            {
-                    return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Mã rạp không tồn tại !", MessageConstant.MESSAGE_ERROR_404);
-                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã rạp không tồn tại !");
-            }
-
-            var ckCum = db.CumRap.SingleOrDefault(n => n.MaCumRap == ckRap.MaCumRap);
+            var ckCum = db.CumRap.SingleOrDefault(n => n.MaCumRap == lich.MaRap);
             if (ckCum == null)
             {
                 return new ResponseEntity(StatusCodeConstants.NOT_FOUND, "Chọn sai cụm rạp!", MessageConstant.MESSAGE_ERROR_404);
 
                 //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Chọn sai cụm rạp!");
             }
+
+            //Ran dom rạp
+
+            Random rnd = new Random();
+
+            var listMaRap = db.Rap.Where(n=>n.MaCumRap==lich.MaRap);
+
+            int index = rnd.Next(listMaRap.Count());
+
+            int maRap = listMaRap.ElementAt(index).MaRap;
+
             var ckHeThongRap = db.HeThongRap.SingleOrDefault(n => n.MaHeThongRap == ckCum.MaHeThongRap);
             if (ckHeThongRap == null)
             {
@@ -195,7 +190,7 @@ namespace bookingticketAPI.Controllers
 
                 //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Chọn sai hệ thống rạp!");
             }
-            var lichChieu = db.LichChieu.Where(n => n.NgayChieuGioChieu.Date == lichModel.NgayChieuGioChieu.Date && n.MaPhim == p.MaPhim && n.MaCumRap == ckCum.MaCumRap && n.MaHeThongRap == ckHeThongRap.MaHeThongRap && n.MaRap == lich.MaRap);
+            var lichChieu = db.LichChieu.Where(n => n.NgayChieuGioChieu.Date == lichModel.NgayChieuGioChieu.Date && n.MaPhim == p.MaPhim && n.MaCumRap == ckCum.MaCumRap && n.MaHeThongRap == ckHeThongRap.MaHeThongRap && n.MaRap == maRap);
             if (lichChieu.Count() > 0)
             {
                 return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Lịch chiếu đã bị trùng", MessageConstant.BAD_REQUEST);
@@ -214,7 +209,7 @@ namespace bookingticketAPI.Controllers
 
             //Lấy mã rạp ngẫu nhiên không có trong lst đó
 
-            lichModel.MaRap = lich.MaRap;
+            lichModel.MaRap = maRap;
             lichModel.MaPhim = lich.MaPhim;
             lichModel.ThoiLuong = 120;
             lichModel.MaNhom = p.MaNhom;
