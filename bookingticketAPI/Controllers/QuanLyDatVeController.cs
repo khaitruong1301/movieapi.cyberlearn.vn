@@ -177,11 +177,11 @@ namespace bookingticketAPI.Controllers
 
             Random rnd = new Random();
 
-            var listMaRap = db.Rap.Where(n=>n.MaCumRap==lich.MaRap);
+            var listMaRap = db.Rap.Where(n=>n.MaCumRap==lich.MaRap).ToArray();
 
             int index = rnd.Next(listMaRap.Count());
 
-            int maRap = listMaRap.ElementAt(index).MaRap;
+            int maRap = listMaRap[index].MaRap;
 
             var ckHeThongRap = db.HeThongRap.SingleOrDefault(n => n.MaHeThongRap == ckCum.MaHeThongRap);
             if (ckHeThongRap == null)
