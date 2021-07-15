@@ -785,8 +785,8 @@ namespace bookingticketAPI.Controllers
         //}
 
         [Authorize(Roles = "QuanTri")]
-        [HttpDelete("XoaPhim")]
-        public async Task<ResponseEntity> XoaPhim(int MaPhim)
+        [HttpDelete("XP")]
+        public async Task<ResponseEntity> XP(int MaPhim)
         {
 
             bool ckbPhim = db.Phim.Any(n => n.MaPhim == MaPhim);
@@ -803,6 +803,10 @@ namespace bookingticketAPI.Controllers
 
                 //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Phim đã xếp lịch chiếu không thể xóa");
             }
+            var listLichChieu = db.LichChieu.Where(n => n.MaPhim == MaPhim);
+            db.LichChieu.RemoveRange(listLichChieu);
+            db.SaveChanges();
+
 
             Phim p = db.Phim.SingleOrDefault(n => n.MaPhim == MaPhim);
             string hinhAnh = p.HinhAnh;
@@ -819,6 +823,44 @@ namespace bookingticketAPI.Controllers
             //return Ok();
         }
 
+
+
+
+        [Authorize(Roles = "QuanTri")]
+        [HttpDelete("XoaPhim")]
+        public async Task<ResponseEntity> XoaPhim(int MaPhim)
+        {
+
+            bool ckbPhim = db.Phim.Any(n => n.MaPhim == MaPhim);
+            if (!ckbPhim)
+            {
+                return new ResponseEntity(StatusCodeConstants.BAD_REQUEST, "Mã phim không hợp lệ!", MessageConstant.BAD_REQUEST);
+
+                //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Mã phim không hợp lệ!");
+            }
+            //bool ckbLichChieu = db.LichChieu.Any(n => n.MaPhim == MaPhim);
+            //if (ckbLichChieu)
+            //{
+            //    return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Phim đã xếp lịch chiếu không thể xóa!", MessageConstant.MESSAGE_ERROR_500);
+
+            //    //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Phim đã xếp lịch chiếu không thể xóa");
+            //}
+
+            Phim p = db.Phim.SingleOrDefault(n => n.MaPhim == MaPhim);
+            p.DaXoa = true;
+            string hinhAnh = p.HinhAnh;
+            //db.Phim.Remove(p);
+            db.SaveChanges();
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/hinhanh", hinhAnh);
+            if (System.IO.File.Exists(path))
+            {
+                System.IO.File.Delete(path);
+            }
+
+            return new ResponseEntity(StatusCodeConstants.OK, "Xóa thành công!", MessageConstant.MESSAGE_SUCCESS_200);
+
+            //return Ok();
+        }
 
         [HttpGet("LayThongTinPhim")]
         public async Task<ResponseEntity> LayThongTinPhim(int MaPhim = 0)
