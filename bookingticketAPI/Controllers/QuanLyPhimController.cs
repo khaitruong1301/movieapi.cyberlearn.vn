@@ -851,11 +851,11 @@ namespace bookingticketAPI.Controllers
             string hinhAnh = p.HinhAnh;
             //db.Phim.Remove(p);
             db.SaveChanges();
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/hinhanh", hinhAnh);
-            if (System.IO.File.Exists(path))
-            {
-                System.IO.File.Delete(path);
-            }
+            //var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/hinhanh", hinhAnh);
+            //if (System.IO.File.Exists(path))
+            //{
+            //    System.IO.File.Delete(path);
+            //}
 
             return new ResponseEntity(StatusCodeConstants.OK, "Xóa thành công!", MessageConstant.MESSAGE_SUCCESS_200);
 
