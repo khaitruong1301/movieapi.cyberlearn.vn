@@ -742,7 +742,8 @@ namespace bookingticketAPI.Controllers
 
         //    if (file.Length > TenMegaBytes)
         //    {
-        //        return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Dung lượng file vượt quá 1 MB!", MessageConstant.ERROR);
+        //        return new ResponseEntity(Sta
+        //        tusCodeConstants.ERROR_SERVER, "Dung lượng file vượt quá 1 MB!", MessageConstant.ERROR);
 
         //        //return await tbl.TBLoi(ThongBaoLoi.Loi500, "Dung lượng file vượt quá 1 MB!");
 

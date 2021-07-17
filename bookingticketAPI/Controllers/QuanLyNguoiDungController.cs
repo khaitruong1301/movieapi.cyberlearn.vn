@@ -364,9 +364,9 @@ namespace bookingticketAPI.Controllers
                 //return response;
             }
         }
-        [Authorize]
-        [HttpPut("CapNhatThongTinNguoiDung")]
-        public async Task<ResponseEntity> CapNhatThongTinNguoiDung(NguoiDungVM nd)
+        [Authorize(Roles = "QuanTri")]
+        [HttpPost("CapNhatThongTinNguoiDung")]
+        public async Task<ResponseEntity> CapNhat(NguoiDungVM nd)
         {
             nd.MaNhom = nd.MaNhom.ToUpper();
             bool ckbLoaiND = db.LoaiNguoiDung.Any(n => n.MaLoaiNguoiDung == nd.MaLoaiNguoiDung);
@@ -396,7 +396,95 @@ namespace bookingticketAPI.Controllers
             NguoiDung nguoiDungCapNhat = db.NguoiDung.SingleOrDefault(n => n.TaiKhoan == nd.TaiKhoan);
             if (nguoiDungCapNhat == null)
             {
-                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tài khoản đã tồn tại!", MessageConstant.ERROR);
+                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tài khoản không tồn tại!", MessageConstant.ERROR);
+
+                //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Tài khoản không tồn tại!");
+                //return response;
+            }
+            try
+            {
+
+
+                if (nd.MatKhau == "")
+                {
+                    nd.MatKhau = nguoiDungCapNhat.MatKhau;
+                }
+
+                //nguoiDungCapNhat.TaiKhoan = ndUpdate.TaiKhoan;
+                nguoiDungCapNhat.HoTen = nd.HoTen;
+                nguoiDungCapNhat.MatKhau = nd.MatKhau;
+                nguoiDungCapNhat.BiDanh = LoaiBoKyTu.bestLower(nd.HoTen);
+                nguoiDungCapNhat.SoDt = nd.SoDt;
+                nguoiDungCapNhat.MaLoaiNguoiDung = nd.MaLoaiNguoiDung;
+                nguoiDungCapNhat.Email = nd.Email;
+                //nguoiDungCapNhat.MaNhom = ndUpdate.MaNhom;
+
+                db.SaveChanges();
+                var result = new ThongTinTaiKhoanVM { TaiKhoan = nguoiDungCapNhat.TaiKhoan, MatKhau = nguoiDungCapNhat.MatKhau, HoTen = nguoiDungCapNhat.HoTen, Email = nguoiDungCapNhat.Email, SoDT = nguoiDungCapNhat.SoDt, MaNhom = nguoiDungCapNhat.MaNhom, LoaiNguoiDung = nguoiDungCapNhat.MaLoaiNguoiDungNavigation.TenLoai };
+
+                return new ResponseEntity(StatusCodeConstants.OK, result, MessageConstant.MESSAGE_SUCCESS_200);
+
+
+            }
+            catch (Exception ex)
+            {
+                return new ResponseEntity(StatusCodeConstants.OK, "Dữ liệu không hợp lệ!", MessageConstant.MESSAGE_SUCCESS_200);
+
+                //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Dữ liệu không hợp lệ!");
+                //return response;
+            }
+        }
+        [Authorize]
+        [HttpPut("CapNhatThongTinNguoiDung")]
+        public async Task<ResponseEntity> CapNhatThongTinNguoiDung(NguoiDungVM nd)
+        {
+
+            var accessToken = Request.Headers[HeaderNames.Authorization];
+
+            userToken usToken = commonService.getUserByToken(accessToken).Result;
+            if (usToken == null)
+            {
+                return new ResponseEntity(StatusCodeConstants.AUTHORIZATION, "Token đã hết hạn bạn hãy đăng nhập lại!", MessageConstant.MESSAGE_ERROR_401);
+
+            }
+
+            if (usToken.taiKhoan !=  nd.TaiKhoan)
+            {
+                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Bạn không có quyền thay đổi tài khoản người khác !", MessageConstant.MESSAGE_ERROR_500);
+
+                //return await tbl.TBLoi(ThongBaoLoi.L
+            }
+
+
+                nd.MaNhom = nd.MaNhom.ToUpper();
+            bool ckbLoaiND = db.LoaiNguoiDung.Any(n => n.MaLoaiNguoiDung == nd.MaLoaiNguoiDung);
+            if (!ckbLoaiND)
+            {
+                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Loại người dùng không hợp lệ!", MessageConstant.ERROR);
+
+                //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Loại người dùng không hợp lệ!");
+                //return response;
+            }
+            bool ckNhom = db.Nhom.Any(n => n.MaNhom == nd.MaNhom);
+            if (!ckNhom)
+            {
+                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Nhóm người dùng không hợp lệ!", MessageConstant.ERROR);
+
+                //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Nhóm người dùng không hợp lệ!");
+                //return response;
+            }
+            bool ckEmail = db.NguoiDung.Any(n => n.Email == nd.Email && n.TaiKhoan != nd.TaiKhoan);
+            if (ckEmail)
+            {
+                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Email đã tồn tại!", MessageConstant.ERROR);
+
+                //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Email đã tồn tại!");
+                //return response;
+            }
+            NguoiDung nguoiDungCapNhat = db.NguoiDung.SingleOrDefault(n => n.TaiKhoan == nd.TaiKhoan);
+            if (nguoiDungCapNhat == null)
+            {
+                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Tài khoản không tồn tại!", MessageConstant.ERROR);
 
                 //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Tài khoản không tồn tại!");
                 //return response;
