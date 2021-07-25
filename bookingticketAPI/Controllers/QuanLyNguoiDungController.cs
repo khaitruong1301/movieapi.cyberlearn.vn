@@ -93,25 +93,32 @@ namespace bookingticketAPI.Controllers
                 //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Tài khoản đã tồn tại!");
                 //return response;
             }
-            try
-            {
-                NguoiDung ndInsert = Mapper.Map<NguoiDung_VM, NguoiDung>(nd);
-                ndInsert.MaLoaiNguoiDung = LoaiND.KhachHang;
-                ndInsert.BiDanh = LoaiBoKyTu.bestLower(ndInsert.HoTen);
-           
-                db.NguoiDung.Add(ndInsert);
+            //try
+            //{
+            NguoiDung ndInsert = new NguoiDung();
+            ndInsert.TaiKhoan = nd.TaiKhoan;
+            ndInsert.HoTen = nd.HoTen;
+            ndInsert.MatKhau = nd.MatKhau;
+            ndInsert.Email = nd.Email;
+            ndInsert.MaNhom = nd.MaNhom;
+
+            ndInsert.MaLoaiNguoiDung = LoaiND.KhachHang;
+            ndInsert.BiDanh = LoaiBoKyTu.bestLower(ndInsert.HoTen);
+
+
+            db.NguoiDung.Add(ndInsert);
                 db.SaveChanges();
                 return new ResponseEntity(StatusCodeConstants.OK, nd, MessageConstant.MESSAGE_SUCCESS_200);
 
                 //return Ok(nd);
-            }
-            catch (Exception ex)
-            {
-                return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Dữ liệu không hợp lệ!", MessageConstant.ERROR);
+            //}
+            //catch (Exception ex)
+            //{
+            //    return new ResponseEntity(StatusCodeConstants.ERROR_SERVER, "Dữ liệu không hợp lệ!", MessageConstant.ERROR);
 
-                //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Dữ liệu không hợp lệ!");
-                //return response;
-            }
+            //    //var response = await tbl.TBLoi(ThongBaoLoi.Loi500, "Dữ liệu không hợp lệ!");
+            //    //return response;
+            //}
         }
 
 

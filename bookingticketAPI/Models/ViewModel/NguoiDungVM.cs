@@ -29,4 +29,5 @@ namespace bookingticketAPI.Models.ViewModel
         public string HoTen { get; set; }
 
     }
+   
 }
