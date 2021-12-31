@@ -40,8 +40,12 @@ namespace bookingticketAPI.Hubs
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
 
-        public async Task datGhe(string taiKhoan, string danhSachGheDangDat, int maLichChieu)
+        public async Task datGhe(string taiKhoan="", string danhSachGheDangDat="[]", int maLichChieu=0)
         {
+            if (string.IsNullOrEmpty(taiKhoan))
+            {
+                return;
+            }
             IEnumerable<DanhSachVeDangDatVM> dsGheDangDatReturn = new List<DanhSachVeDangDatVM>();
             using (var connection = new SqlConnection(_connectionString))
             {
